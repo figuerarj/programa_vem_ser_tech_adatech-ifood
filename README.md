@@ -3,6 +3,6 @@ Repositório com todo o material referente ao programa Vem ser TECH by Ifood.
 
 ## Material encontrado no Repositorio:
 
-### Exercícios
-### Projetos
-### Anotações
+### 1. Exercícios
+### 2. Projetos
+### 3. Anotações
