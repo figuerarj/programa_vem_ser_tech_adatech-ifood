@@ -1,6 +1,6 @@
-# Exercícios do Programa Vem ser TECH -  Trilha de Front-end ADA by Ifood
+# Exercícios do Programa Vem ser TECH -  Trilha de Front-end AdaTech by Ifood
 
-Este repositório contém todos os exercícios das aulas da trilha de front-end do curso da ADA que estou fazendo. Aqui, você encontrará os códigos e recursos relacionados a essas atividades.
+Este repositório contém todos os exercícios resolvidos ao longo do programa. 
 
 ## Estrutura do Repositório
 
@@ -16,13 +16,13 @@ Este repositório contém todos os exercícios das aulas da trilha de front-end 
 
 ## Orientações
 
-1. Acesse o diretório da aula desejada.
+1. Acesse o diretório da aula desejada ou clique no nome da aula.
 
-2. Siga as recomendações especifícas que estará no readme do exercício.
+2. Cada aula terá o objetivo do exercício e oque foi pedido.
 
 ## Sugestões
 
-Contribuições são bem-vindas! Se você deseja melhorar algum exercício ou adicionar novos, sinta-se à vontade para fazer um fork deste repositório e criar um pull request.
+Contribuições são bem-vindas! Caso você tenha interesse em conversar sobre algum exercício em especifico, fique a vontade.
 
 ## Conexões
 
