@@ -4,31 +4,26 @@ Este repositório contém todos os exercícios das aulas da trilha de front-end 
 
 ## Estrutura do Repositório
 
-- [**aula1**](https://github.com/figuerarj/programa_vem_ser_tech_adatech-ifood/tree/main/exercicio/aula_001): Exercício "HTML usando Notepad".
-- **aula1**: Exercícios da **segunda aula**.
-- **aula1**: Exercícios da **terceira aula**.
-- **aula1**: Exercícios da **quarta aula**.
-- **aula1**: Exercícios da **quinta aula**.
-- **aula1**: Exercícios da **sexta aula**.
-- **aula1**: Exercícios da **sétima aula**.
-- **aula1**: Exercícios da **oitava aula**.
+### Selecione abaixo a aula:
+- [**aula001**](https://github.com/figuerarj/programa_vem_ser_tech_adatech-ifood/tree/main/exercicio/aula_001): Exercício "HTML usando Notepad".
+- **aula002**: Exercício.
+- **aula003**: Exercício.
+- **aula004**: Exercício.
+- **aula005**: Exercício.
+- **aula006**: Exercício.
+- **aula007**: Exercício.
+- **aula008**: Exercício.
 
-## Como Usar
+## Orientações
 
-1. Clone este repositório para a sua máquina local:
+1. Acesse o diretório da aula desejada.
 
-`git clone https://github.com/NanneSantin/exercicios-ada.git`
+2. Siga as recomendações especifícas que estará no readme do exercício.
 
-2. Acesse o diretório da aula desejada.
-
-3. Siga as recomendações especifícas que estará no readme do exercício.
-
-## Contribuições
+## Sugestões
 
 Contribuições são bem-vindas! Se você deseja melhorar algum exercício ou adicionar novos, sinta-se à vontade para fazer um fork deste repositório e criar um pull request.
 
-## Contato
+## Conexões
 
-Se você tiver alguma dúvida ou sugestão, entre em contato comigo pelo meu perfil do GitHub.
-
-Vamos aprender juntas e evoluir como programmers! 🚀
+Não deixe de visitar o meu [linkedin](https://www.linkedin.com/in/dev-rod-santos/)! 
