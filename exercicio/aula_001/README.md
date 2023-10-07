@@ -141,6 +141,6 @@ A ideia é desenvolver uma página HTML sobre seu background profissional e pess
     
     São elementos de bloco,
     
-    Evite usar multiplos <h1> na página (acessibilidade) - boa prática
+    Evite usar multiplos na página (acessibilidade) - boa prática
     
 - Âncora `<a href=””>`
