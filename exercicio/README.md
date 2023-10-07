@@ -4,7 +4,7 @@ Este repositório contém todos os exercícios das aulas da trilha de front-end 
 
 ## Estrutura do Repositório
 
-- [**aula1**](): Exercício "HTML usando Notepad".
+- [**aula1**](https://github.com/figuerarj/programa_vem_ser_tech_adatech-ifood/tree/main/exercicio/aula_001): Exercício "HTML usando Notepad".
 - **aula1**: Exercícios da **segunda aula**.
 - **aula1**: Exercícios da **terceira aula**.
 - **aula1**: Exercícios da **quarta aula**.
