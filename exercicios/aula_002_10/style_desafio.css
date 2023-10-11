@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  background-color: darkslateblue;
+}
+
+h2 {
+  color: black;
+  background-color: white;
+  display: inline;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.3);
+}
+
+section.todo-list h2{
+ background-color: chartreuse;
+ height: 50px;
+}
+
+section.shopping-list h2{
+    background-color:deeppink;
+    height: 50px;
+}
+
+section.family-members h2{
+    background-color: aqua;
+    height: 50px;
+}
+
+section.family-members h3 {
+  /* list-style: none; */
+  margin-top: -5px;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.purple {
+  color: blueviolet;
+}
+
+.bblue {
+  border: 1px solid blue;
+}
+
+.bred {
+  border: 1px solid red;
+}
+
+.bgreen {
+  border: 1px solid green;
+}
+
+.bpurple {
+  border: 1px solid purple;
+}
+
+/* .alinha_bookmark {
+  margin-left: 40px;
+  text-decoration: underline;
+} */
+
+i {
+  margin-right: 5px;
+}
+
+p {
+  width: 600px;
+  margin-top: -10px;
+}
+
+/* p span{
+    font-weight: bold;
+    font-size: 1.8em;
+    color: goldenrod;
+} */
+
+.img_ico {
+  height: 110px;
+  border-radius: 10px 0px 0px 10px;
+  /* border: 1px solid goldenrod; */
+}
+
+.border {
+  /* border: 1px solid goldenrod; */
+  padding: 15px;
+  /* margin-bottom: 0px; */
+  width: 600px;
+  height: 110px;
+  background-color: white;
+  border-radius: 0px 10px 10px 0px;
+}
+.flex {
+  display: flex;
+  width: 673.5px;
+  height: 110px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.3);
+}
+
+.div_shopping{
+    background-color: white;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.3);
+}
+
+article.div_shopping ul{
+    list-style-type: none;
+    background-color: aqua;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 20px;
+}
+
+.div_todo{
+    background-color: white;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.3);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3{
+    color:white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/*              GRID                             */
+
+.family-members {
+  display: grid;
+  grid-template-columns: 1fr; /* Definindo apenas uma coluna */
+  gap: 20px;
+}
+
+.shopping-list,
+.todo-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.grid-heading {
+  text-align: center;
+}
+
+.family-members,
+.shopping-list,
+.todo-list {
+  flex: 1;
+  padding: 10px;
+}
+
+/*        TABELA          */
+.tg {
+  border-collapse: collapse;
+  /* border-spacing: 0; */
+  box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.3);
+  /* border: 1px solid white; */
+  margin-top: 15px;
+ 
+}
+.tg td {
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg th {
+    
+      border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg .tg-lzqt {
+    
+  background-color: #656565;
+  border-color: inherit;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: center;
+}
+/* .tg .tg-oq35{background-color:#333333;border-color:inherit;text-align:left;vertical-align:top} */
+.tg .tg-5w3z {
+    
+  background-color: #ecf4ff;
+  border-color: inherit;
+  text-align: center;
+  vertical-align: center;
+}
+
+
+
