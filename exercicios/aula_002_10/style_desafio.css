@@ -14,10 +14,14 @@ body {
 h2 {
   color: black;
   background-color: white;
-  display: inline;
+  display: flex;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  justify-self: center;
+  width: 300px;
+  
 }
 
 section.todo-list h2{
@@ -26,12 +30,13 @@ section.todo-list h2{
 }
 
 section.shopping-list h2{
-    background-color:deeppink;
+    background-color: rgb(115, 164, 255);
+    
     height: 50px;
 }
 
 section.family-members h2{
-    background-color: aqua;
+    background-color:rgb(255, 223, 80);
     height: 50px;
 }
 
@@ -73,6 +78,8 @@ section.family-members h3 {
 .bpurple {
   border: 1px solid purple;
 }
+
+
 
 /* .alinha_bookmark {
   margin-left: 40px;
@@ -118,69 +125,268 @@ p {
   box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.3);
 }
 
+section.shopping-list{
+    /* background-color: pink; */
+    width: 200px;
+    
+}
+
 .div_shopping{
     background-color: white;
+    width: 350px;
     height: 600px;
     border-radius: 10px;
+    
+   
+    justify-self: center;
+    
     box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.3);
 }
 
 article.div_shopping ul{
     list-style-type: none;
-    background-color: aqua;
+   
     padding: 10px;
+    margin-left: 15px;
     margin-bottom: 10px;
-    width: 20px;
+    width: fit-content;
 }
 
+article.div_shopping ul li{
+    color: dark;
+    text-align:left;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 300px;
+    margin-bottom: 30px;
+    padding-left: 50px;
+    
+    background-color: lightblue;
+    border-radius: 10px;
+    font-size: 1.4em;
+    border: 1px solid #90d0e7;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* CORES DA LISTA DE COMPRAS */
+
+article.div_shopping ul li:nth-child(1){
+    background-color: blue;
+    border: 1px solid blue;
+    color: white;
+    
+}
+
+article.div_shopping ul li:nth-child(2){
+    background-color: crimson;
+    border: 1px solid crimson;
+    color: white;
+    
+}
+
+article.div_shopping ul li:nth-child(3){
+    background-color: crimson;
+    border: 1px solid crimson;
+    color: white;
+    
+}
+
+article.div_shopping ul li:nth-child(4){
+    background-color: blue;
+    border: 1px solid blue;
+    color: white;
+    
+}
+
+article.div_shopping ul li:nth-child(5){
+    background-color: blue;
+    border: 1px solid blue;
+    color: white;
+    
+}
+
+article.div_shopping ul li:nth-child(6){
+    background-color: purple;
+    border: 1px solid purple;
+    color: white;
+}
+article.div_shopping ul li:nth-child(7){
+    background-color: blue;
+    border: 1px solid blue;
+    color: white;
+}
+
+article.div_shopping ul li:nth-child(8){
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+}
+
+article.div_shopping ul li:nth-child(9){
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+}
+article.div_shopping ul li:nth-child(10){
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+}
+
+article.div_shopping ul li i{
+    color: white
+}
+
+/* ------------------------------------  */
 .div_todo{
     background-color: white;
+    width: 400px;
     height: 600px;
     border-radius: 10px;
     box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.3);
+    justify-self: center;
 }
 
-footer{
+.div_todo ol{
+    font-weight: bold;
+    font-size: 1.4em;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer h3{
-    color:white;
-    display: flex;
+    flex-direction: column;
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    width: fit-content;
+    
 }
 
-/*              GRID                             */
+.div_todo ol li{
+    margin-bottom: 10px;
+}
+
+article.div_todo ol li{
+    color: dark;
+    text-align:left;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 300px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    
+    background-color: lightblue;
+    border-radius: 10px;
+    font-size: 0.9em;
+    border: 1px solid #90d0e7;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+ol li:hover{
+    background-color: #656565;
+    font-size: 2em;
+    color: black;
+}
+
+
+/*     CORES DA LISTA DE TAREFAS            */
+article.div_todo ol li:nth-child(1){
+    background-color: blue;
+    border-color: blue;
+}
+
+article.div_todo ol li:nth-child(2){
+    background-color: purple;
+    border-color: purple;
+}
+
+article.div_todo ol li:nth-child(3){
+    background-color: crimson;
+    border-color: crimson;
+}
+
+article.div_todo ol li:nth-child(4){
+    background-color: crimson;
+    border-color: crimson;
+}
+
+article.div_todo ol li:nth-child(5){
+    background-color: blue;
+    border-color: blue;
+}
+
+article.div_todo ol li:nth-child(6){
+    background-color: crimson;
+    border-color: crimson;
+}
+
+article.div_todo ol li:nth-child(7){
+    background-color: green;
+    border-color: green;
+}
+article.div_todo ol li:nth-child(8){
+    background-color: blue;
+    border-color: blue;
+}
+
+article.div_todo ol li:nth-child(9){
+    background-color: crimson;
+    border-color: crimson;
+}
+article.div_todo ol li:nth-child(10){
+    background-color: purple;
+    border-color: purple;
+}
+
+article.div_todo ol li:nth-child(11){
+    background-color: green;
+    border-color: green;
+}
+
+article.div_todo ol li span{
+    color: white;
+}
+
+/* ------------------------------------------- */
+
+
+
+/*  -------------GRID   ------------------  */
 
 .family-members {
-  display: grid;
-  grid-template-columns: 1fr; /* Definindo apenas uma coluna */
-  gap: 20px;
-}
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(700px, 1fr)); */
+    /* grid-template-columns: 1fr;  */
+    /* Definindo apenas uma coluna */
+    gap: 20px;
+    grid-auto-flow: dense;
+  }
+  
+  .shopping-list,
+  .todo-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  
+    /* grid-template-columns: 1fr; */
+    gap: 20px;
+  }
+  
+  .grid-heading {
+    text-align: center;
+  }
+  
+  .family-members,
+  .shopping-list,
+  .todo-list {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  
+  
 
-.shopping-list,
-.todo-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.grid-heading {
-  text-align: center;
-}
-
-.family-members,
-.shopping-list,
-.todo-list {
-  flex: 1;
-  padding: 10px;
-}
-
-/*        TABELA          */
+/* ----------------TABELA--------------*/
 .tg {
   border-collapse: collapse;
   /* border-spacing: 0; */
@@ -228,6 +434,18 @@ footer h3{
   text-align: center;
   vertical-align: center;
 }
+/*--------------------------------------------*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
+footer h3{
+    color:white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
 
