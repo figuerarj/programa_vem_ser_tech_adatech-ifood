@@ -1,0 +1,41 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+div{
+    margin-bottom: 20px;
+}
+
+.bt_submit{
+    width: 300px;
+}
+
+select{
+    font-size: 15px;
+}
+
+p,
+label {
+  font:
+    1rem 'Fira Sans',
+    sans-serif;
+}
+
+fieldset input {
+  margin: 0.3rem;
+}
+fieldset{
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+fieldset legend{
+    font-size: 20px;
+}
