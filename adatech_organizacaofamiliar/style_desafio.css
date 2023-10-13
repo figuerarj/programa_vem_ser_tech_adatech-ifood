@@ -104,6 +104,22 @@ section.family-members h3 {
   font-size: x-large;
 }
 
+.family-members{
+  max-width: 800px;
+  min-width: 500px;
+  width: fit-content;
+}
+
+div.family{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list{
+  min-width: 750;
+}
+
 .red {
   color: red;
 }
@@ -140,6 +156,10 @@ section.family-members h3 {
   border: 1px solid purple;
 }
 
+.margin_icon{
+  margin-left: 20px; 
+}
+
 i {
   margin-right: 5px;
 }
@@ -150,9 +170,10 @@ p {
 
 .img_ico {
   border-radius: 10px 0px 0px 10px;
+  min-width: 50px;
 }
 
-.border {
+.content {
   padding: 15px;
   height: 120px;
   background-color: white;
@@ -428,12 +449,40 @@ footer h3 {
   justify-content: center;
 }
 
-@media only screen and (max-width: 1500px) {
+
+
+@media only screen and (max-width: 1560px) {
 
   /* For mobile phones: */
   [class*="col-"] {
-    width: 90%;
+    width: 100%;
   }
+  .list{
+    width: 50%;
+   
+  }
+
+  .list-content{
+    max-width: 450px;
+  }
+ .r{
+  display: flex;
+  justify-content: end;
+  min-width: 300px;
+ }
+}
+
+@media only screen and (max-width: 880px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+  .list{
+    display:flex;
+    justify-content: center;
+  }
+}
+.list-content{
+  width: 100%;
 }
 
 /* @media only screen and (min-width: 768px) {  
