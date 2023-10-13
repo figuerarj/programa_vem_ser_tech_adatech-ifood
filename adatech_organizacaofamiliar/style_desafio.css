@@ -4,9 +4,12 @@
 }
 
 .header {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 15px;
   text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -22,7 +25,7 @@ body {
 [class*="col-"] {
   float: left;
   padding: 15px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .col-1 {
@@ -453,7 +456,17 @@ footer h3 {
 
 @media only screen and (max-width: 1560px) {
 
-  /* For mobile phones: */
+  
+  .header{
+    max-width: 700px;
+    
+    
+  }
+
+  .header h1{
+    justify-content: center;
+  }
+
   [class*="col-"] {
     width: 100%;
   }
