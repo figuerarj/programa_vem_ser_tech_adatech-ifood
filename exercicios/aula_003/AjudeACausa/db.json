@@ -1,5 +1,5 @@
 {
-  "registrations" : [
+  "registrations": [
     {
       "id": 1,
       "name": "Jeferson Silva",
@@ -7,7 +7,7 @@
       "email": "jeferson@gmail.com",
       "size": "GG",
       "category": "3RUN",
-      "donation": 300.50
+      "donation": 300.5
     },
     {
       "id": 2,
@@ -25,9 +25,9 @@
       "email": "carlos@gmail.com",
       "size": "G",
       "category": "4WALK",
-      "donation": 75.00
-  },
-  {
+      "donation": 75
+    },
+    {
       "id": 4,
       "name": "Ana Souza",
       "age": 22,
@@ -43,7 +43,7 @@
       "email": "joao@gmail.com",
       "size": "XG",
       "category": "5RUN",
-      "donation": 120.00
+      "donation": 120
     },
     {
       "id": 6,
@@ -52,7 +52,61 @@
       "email": "luisa@gmail.com",
       "size": "GG",
       "category": "4WALK",
-      "donation": 90.50
+      "donation": 90.5
+    },
+    {
+      "name": "Rodrigo",
+      "age": "5",
+      "email": "rodrigo@gmail.com",
+      "size": "on",
+      "category": "on",
+      "donation": "300.00",
+      "id": 7
+    },
+    {
+      "name": "Eduardo",
+      "age": "32",
+      "email": "eduardo@ig.com",
+      "size": "on",
+      "category": "on",
+      "donation": "140.00",
+      "id": 8
+    },
+    {
+      "name": "444",
+      "age": "45",
+      "email": "f@dad.com",
+      "size": "on",
+      "category": "on",
+      "donation": "1000",
+      "id": 9
+    },
+    {
+      "name": "444",
+      "age": "45",
+      "email": "f@dad.com",
+      "size": "on",
+      "category": "on",
+      "donation": "1000",
+      "id": 10
+    },
+    {
+      "name": "dasd",
+      "age": "21",
+      "email": "figuerarj@hotmail.com",
+      "size": "on",
+      "category": "[3RUN]",
+      "donation": "12",
+      "id": 11
+    },
+    {
+      "name": "Edu",
+      "age": "12",
+      "email": "eduardo@ig.com",
+      "size": "G",
+      "category": "[5RUN]",
+      "donation": "121",
+      "id": 12
     }
   ]
 }
