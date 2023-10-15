@@ -18,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--background);
-  background-image: url("img/27843.jpg");
+  background-image: url("assets/img/27843.jpg");
   background-position: inherit;
   background-size: cover;
 }
