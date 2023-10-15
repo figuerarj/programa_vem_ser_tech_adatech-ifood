@@ -18,10 +18,10 @@
       </div>
 
       <div class="form">
-        <form action="http://localhost:3000/registrations" method="post">
+        <form class="container-form" action="http://localhost:3000/registrations" method="post">
           <div class="form-header">
             <h1>Ajude a Causa!</h1>
-            <p>Faça parte dessa camapanha e ajuda milhares de crianças!</p>
+            <p>Faça parte dessa campanha e ajuda milhares de crianças!</p>
           </div>
 
           <div class="input-group">
@@ -51,14 +51,14 @@
             <div class="input-box">
               <label>
                 Idade:
-                <input type="number" name="age" placeholder="42" required
+                <input class="xsize" type="number" name="age" placeholder="42" required
               /></label>
             </div>
 
             <div class="input-box">
               <label
                 >Doação(R$):
-                <input
+                <input class="xsize"
                   type="number"
                   name="donation"
                   placeholder="300"
@@ -67,6 +67,7 @@
               </label>
             </div>
           </div>
+          <div class="conteiners-inputs">
           <div class="container-inputs-shirt">
             <fieldset>
               <legend class="shirt-title">Tamanho da Camiseta:</legend>
@@ -137,7 +138,7 @@
               </fieldset>
             
           </div>
-
+        </div>
           <div class="button">
             <button type="submit">Enviar</button>
           </div>

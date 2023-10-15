@@ -72,17 +72,16 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 1rem 0;
+  
 }
 
 .input-box {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.1rem;
+  
 }
 
-/* .input-group .input-box .xsize{
-    width: 600px;
-} */
 
 .input-box input {
   margin: 0.5rem 0;
@@ -90,6 +89,7 @@ body {
   border: none;
   border-radius: 10px;
   box-shadow: 1px 1px 6px #0000001c;
+  
 }
 
 .input-box input:hover {
@@ -99,6 +99,8 @@ body {
 .input-box input:focus-visible {
   outline: 1px solid #c5c2ff;
 }
+
+
 
 fieldset {
   border: none;
@@ -123,6 +125,7 @@ legend {
 .input-box input::placeholder {
   color: #000000be;
   font-weight: 600;
+  
 }
 
 .shirt-group {
@@ -135,6 +138,7 @@ legend {
 .shirt-input {
   display: flex;
   align-items: center;
+  accent-color: rgb(38, 86, 110);
 }
 
 .shirt-input input {
@@ -166,6 +170,7 @@ legend {
 .category-input {
   display: flex;
   align-items: center;
+  accent-color: rgb(38, 86, 110);
 }
 
 .category-input input {
@@ -204,6 +209,106 @@ legend {
   background-color: #658395;
 }
 
-.button button:active{
-    border: #89d8d8;
+@media screen and (max-width: 1540px) {
+    .img-form{
+        display: none;
+    }
+
+    
+
+    .form{
+        border-radius: 20px;
+    }
+
+    .container{
+        width: 50%;
+        border-radius: 20px;
+    }
+
+    .form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1230px){
+    .container{
+        width:90%;
+        border-radius: 20px;
+    }
+
+    .container-form{
+        width: min-content;
+    }
+
+    .form{
+        border-radius: 20px;
+    }
+
+    .form-header{
+        margin:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-group{
+        justify-content: center;
+       
+    }
+
+    .input-box input{
+        width: 600px;
+        display: flex;
+        justify-content: end;
+        margin: 0;
+    }
+    
+    
+}
+
+@media screen and (max-width: 760px){
+    .container{
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .container-form{
+        width: max-content;
+    }
+
+
+    .form{
+        border-radius: 20px;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+        justify-content: flex-start;
+    }
+
+    .input-box input{
+        width: 100%;
+    }
+
+    .xsize{
+        width:110%;
+    }
+
+    .conteiners-inputs{
+        margin-top: 2rem;
+    }
+
+    .category-group{
+        flex-direction: column;
+        margin-top: -20px;
+    }
+
+    .category-input{
+        margin-top: 1rem;
+    }
 }
