@@ -1,126 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <title>Formulário - Ajude a causa</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/styles.css" />
-  <title>Formulário - Ajude a causa</title>
-</head>
+  <body>
+    <!-- <h1></h1> -->
+    <div class="container">
+      <div class="img-form">
+        <img
+          src="assets/img/14physed-running-photo-videoSixteenByNineJumbo1600.jpg"
+          alt="imagem de corredores"
+        />
+      </div>
 
-<body>
-  <!-- <h1></h1> -->
-  <div class="container">
-    <div class="img-form">
-      <img src="assets/img/14physed-running-photo-videoSixteenByNineJumbo1600.jpg" alt="imagem de corredores" />
-    </div>
-
-    <div class="form">
-      <form action="http://localhost:3000/registrations" method="post">
-
-        <div class="form-header">
-          <h1>Formulário de Cadastro</h1>
-        </div>
-
-        <div class="input-group">
-
-          <div class="input-box">
-            <label>
-              Nome:
-              <input type="text" name="name" placeholder="Digite o seu nome" required />
-            </label>
+      <div class="form">
+        <form action="http://localhost:3000/registrations" method="post">
+          <div class="form-header">
+            <h1>Ajude a Causa!</h1>
+            <p>Faça parte dessa camapanha e ajuda milhares de crianças!</p>
           </div>
 
+          <div class="input-group">
+            <div class="input-box">
+              <label>
+                Nome:
+                <input class="xsize"
+                  type="text"
+                  name="name"
+                  placeholder="Digite o seu nome"
+                  required
+                />
+              </label>
+            </div>
 
-          <div class="input-box">
-            <label> Idade: <input type="number" name="age" placeholder="42" required /></label>
+            <div class="input-box">
+              <label
+                >E-mail:
+                <input class="xsize"
+                  type="email"
+                  name="email"
+                  placeholder="jose@gmail.com"
+                  required
+              /></label>
+            </div>
+
+            <div class="input-box">
+              <label>
+                Idade:
+                <input type="number" name="age" placeholder="42" required
+              /></label>
+            </div>
+
+            <div class="input-box">
+              <label
+                >Doação(R$):
+                <input
+                  type="number"
+                  name="donation"
+                  placeholder="300"
+                  required
+                />
+              </label>
+            </div>
           </div>
-
-
-          <div class="input-box">
-            <label>E-mail: <input type="email" name="email" placeholder="jose@gmail.com" required /></label>
-          </div>
-
-          <div class="input-box">
-            <label>Valor da Doação:
-              <input type="number" name="donation" placeholder="300" required />
-            </label>
-          </div>
-
-        </div>
-        <div class="container-inputs-shirt">
-          <div class="shirt-group">
-
+          <div class="container-inputs-shirt">
             <fieldset>
               <legend class="shirt-title">Tamanho da Camiseta:</legend>
+              <div class="shirt-group">
+                <div class="shirt-input">
+                  <label>
+                    <input type="radio" name="size" value="P" checked /> P
+                  </label>
+                </div>
 
-              <div class="shirt-input">
-                <label>
-                  <input type="radio" name="size" value="P" checked /> P
-                </label>
-              </div>
+                <div class="shirt-input">
+                  <label>
+                    <input type="radio" name="size" value="M" /> M
+                  </label>
+                </div>
 
-              <div class="shirt-input">
-                <label>
-                  <input type="radio" name="size" value="M" /> M
-                </label>
-              </div>
+                <div class="shirt-input">
+                  <label>
+                    <input type="radio" name="size" value="G" /> G
+                  </label>
+                </div>
 
-              <div class="shirt-input">
-                <label>
-                  <input type="radio" name="size" value="G" /> G
-                </label>
-              </div>
+                <div class="shirt-input">
+                  <label>
+                    <input type="radio" name="size" value="GG" /> GG
+                  </label>
+                </div>
 
-              <div class="shirt-input">
-                <label>
-                  <input type="radio" name="size" value="GG" /> GG
-                </label>
-              </div>
-
-              <div class="shirt-input">
-                <label>
-                  <input type="radio" name="size" value="XG" /> XG
-                </label>
-              </div>
-
-            </fieldset>
-          </div>
-        </div>
-        
-        <div class="container-inputs-category">
-          <div class="category-group">
-            <fieldset>
-              <legend>Categoria de inscrição:</legend>
-              <div class="category-input">
-                <label>
-                  <input type="radio" name="category" value="[3RUN]" checked /> Corrida 3km
-                </label>
-              </div>
-
-              <div class="category-input">
-                <label>
-                  <input type="radio" name="category" value="[5RUN]" /> Corrida 5km
-                </label>
-              </div>
-              <div class="category-input">
-                <label>
-                  <input type="radio" name="category" value="[4WALK]" /> Caminhada 4km
-                </label>
+                <div class="shirt-input">
+                  <label>
+                    <input type="radio" name="size" value="XG" /> XG
+                  </label>
+                </div>
               </div>
             </fieldset>
           </div>
-        </div>
-        
-        <div class="button">
-          <button type="submit">Enviar</button>
-        </div>
-      </form>  
+
+          <div class="container-inputs-category">
+            
+              <fieldset>
+                <legend>Categoria de inscrição:</legend>
+                <div class="category-group">
+                <div class="category-input">
+                  <label>
+                    <input
+                      type="radio"
+                      name="category"
+                      value="[3RUN]"
+                      checked
+                    />
+                    Corrida 3km
+                  </label>
+                </div>
+
+                <div class="category-input">
+                  <label>
+                    <input type="radio" name="category" value="[5RUN]" />
+                    Corrida 5km
+                  </label>
+                </div>
+                <div class="category-input">
+                  <label>
+                    <input type="radio" name="category" value="[4WALK]" />
+                    Caminhada 4km
+                  </label>
+                </div>
+              </div>
+              </fieldset>
+            
+          </div>
+
+          <div class="button">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
     </div>
-    
-  </div>
-  
-
-</body>
-
+  </body>
 </html>
