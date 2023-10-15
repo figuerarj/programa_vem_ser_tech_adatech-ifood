@@ -205,6 +205,11 @@ legend {
   font-weight: 800;
   color: #fff;
 }
+
+.button button:active{
+  color: black;
+}
+
 .button button:hover {
   background-color: #658395;
 }
@@ -233,11 +238,15 @@ legend {
 @media screen and (max-width: 1230px){
     .container{
         width:90%;
+        height: 90%;
         border-radius: 20px;
     }
+    
+
 
     .container-form{
         width: min-content;
+        
     }
 
     .form{
@@ -254,6 +263,7 @@ legend {
 
     .input-group{
         justify-content: center;
+        margin: 0px;
        
     }
 
@@ -264,6 +274,18 @@ legend {
         margin: 0;
     }
     
+    .conteiners-inputs{
+      margin-top: 0rem;
+  }
+
+  .category-group{
+      
+      margin-top: -10px;
+  }
+
+  .category-input{
+      margin-top: 0.8rem;
+  }
     
 }
 
@@ -281,6 +303,7 @@ legend {
 
     .form{
         border-radius: 20px;
+        min-width: 450px;
     }
     .input-group{
         flex-direction: column;
