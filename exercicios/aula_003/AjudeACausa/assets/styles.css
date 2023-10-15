@@ -18,7 +18,10 @@ body{
     justify-content: center;
     align-items: center;
     background-color:var(--background);
-    
+    background-image: url('img/27843.jpg');
+    background-position: inherit;
+    background-size: cover;
+
 } 
 
 .container{
@@ -26,6 +29,7 @@ body{
     height: 80vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 10, 10, 0.2);
+    
 }
 
 .img-form{
@@ -35,6 +39,7 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    border-radius: 20px 0 0px 20px;
     
 }
 
@@ -43,4 +48,164 @@ body{
     height: 100%;
     object-fit: cover;
     object-position: 120px;
+    
+}
+
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 20px 20px 0;
+    /* background: rgba(12, 183, 21, 0.25); */
+    backdrop-filter: blur(50px) saturate(50%);
+    -webkit-backdrop-filter: blur(3px) saturate(50%);
+    background-color: rgba(190, 236, 255, 0.638);
+    border: 1px solid rgba(219, 209, 219, 0.3);
+    padding: 30px;
+}
+
+.form-header{
+    margin-bottom: 1rem;
+    
+}
+
+.input-group{
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+/* .input-group .input-box .xsize{
+    width: 600px;
+} */
+
+.input-box input{
+    margin: 0.5rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid #c5c2ff;
+}
+
+fieldset{
+    border:none;
+    /* background-color: #fff; */
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(179, 229, 250);
+}
+
+fieldset:hover{
+    
+    background-color: #eeeeee75;
+}
+
+.input-box label,
+legend{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+legend{
+/*     
+    margin-left: 40px;
+     */
+}
+
+.input-box input::placeholder{
+    color:#000000be;
+    font-weight: 600;
+}
+
+.shirt-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+    padding: 0 0.5rem;
+    
+}
+
+.shirt-input{
+    display: flex;
+    align-items: center;
+    
+}
+
+.shirt-input input{
+    margin-right: 0.35rem;
+}
+
+.gender-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.container-inputs-shirt{
+    margin-bottom: 35px;
+}
+
+/* ----------- */
+
+.category-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0.5rem;
+    
+    
+}
+
+.category-input{
+    display: flex;
+    align-items: center;
+    
+}
+
+.category-input input{
+    margin-right: 0.35rem;
+}
+
+.category-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.container-inputs-category{
+    margin-bottom: 35px;
+}
+
+.button button{
+    width: 100%;
+    margin-top: 0.2;
+    border: none;
+    background-color: #63c3ff;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button button:hover{
+    background-color: #57aade;
 }
