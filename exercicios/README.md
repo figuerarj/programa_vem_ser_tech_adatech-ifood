@@ -7,8 +7,8 @@ Este repositório contém todos os exercícios resolvidos ao longo do programa.
 ### Selecione abaixo a aula:
 - [**aula001**](https://github.com/figuerarj/programa_vem_ser_tech_adatech-ifood/tree/main/exercicios/aula_001): Exercício "HTML usando Notepad".
 - [**aula002**](https://github.com/figuerarj/programa_vem_ser_tech_adatech-ifood/tree/main/exercicios/aula_002_10): Exercício Listas e Tabelas.
-- **aula003**: Exercício.
-- **aula004**: Exercício.
+- [**aula003**](https://github.com/figuerarj/programa_vem_ser_tech_adatech-ifood/tree/main/exercicios/aula_003): Exercício Formulário.
+- [**aula004**](https://github.com/figuerarj/programa_vem_ser_tech_adatech-ifood/tree/main/exercicios/aula_004): Projeto usando SEO.
 - **aula005**: Exercício.
 - **aula006**: Exercício.
 - **aula007**: Exercício.
