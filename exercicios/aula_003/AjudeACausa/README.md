@@ -2,6 +2,14 @@
 
 Este é o repositório oficial para o projeto de desenvolvimento do formulário "Ajude a Causa", uma parte do programa "Vem ser Tech" em parceria com a Ada Tech.
 
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação e Uso](#instalacao-e-uso)
+- [Contribuições](#contribuicoes)
+- [Autor](#autor)
+- [Agradecimentos](#agradecimentos)
+- [Notas](#notas)
+
 ## Sobre o Projeto
 
 O projeto do formulário "Ajude a Causa" foi desenvolvido para auxiliar na arrecadação de doações em um evento de corrida. Antes da implementação deste formulário, o cliente enfrentava desafios na organização das doações, que eram recebidas por telefone e e-mail e registradas em papéis. A nossa solução abordou esses desafios por meio da criação de um formulário online, que permite coletar informações detalhadas dos doadores, incluindo o valor da doação e outras informações relevantes. 
