@@ -59,6 +59,12 @@
   text-align: center;
 }
 
+hr{
+    /* outline-style: dotted; */
+    color: var(--text-color);
+    opacity: .1;
+}
+
 @media screen and (max-width: 1000px) {
   .logo_area {
     display: none;
