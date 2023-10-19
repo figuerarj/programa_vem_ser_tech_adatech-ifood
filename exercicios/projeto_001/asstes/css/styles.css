@@ -1,3 +1,12 @@
+:root {
+    --text-black: #000;
+    --text-color: #1b1b1b;
+    --text-hover: #333;
+    --background-color: #ead9ce;
+    --background-white: #F2F2F2;
+  }
+
+
 body{
     background-color: #EAD9CE;
     width: 100%;
