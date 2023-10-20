@@ -1,6 +1,6 @@
 .nav_main {
   margin: 0 auto;
-  width: 80%;
+  width: 80rem;
   background-color: var(--background-color);
   height: 170px;
 }
@@ -8,9 +8,8 @@
 .nav_main ul {
   list-style: none;
   margin: 0;
-
   text-align: right;
-  padding-top: 69px;
+  padding-top: 65px;
   font-family: "Lora", serif;
   font-size: 0.9375rem;
   font-style: normal;
@@ -65,12 +64,33 @@ hr{
     opacity: .1;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 845px) {
   .logo_area {
+    left: 20%;
+  right: 20%;
+  }
+
+  .nav_main ul li:nth-child(1) {
+    float: none;
+  }
+  .nav_main ul li:nth-child(2) {
+    float: none;
+  }
+  .nav_main ul li:nth-child(3) {
+    float: none;
+  }
+  .nav_main ul li:nth-child(8) {
     display: none;
   }
+
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
+  
+  .logo_area {
+    left: 30%;
+  right: 30%;
+  }
+  
   .nav_main ul li {
     display: block;
   }
@@ -78,6 +98,15 @@ hr{
   .nav_main ul {
     padding-top: 20px;
   }
+  
+  .nav_main ul li:nth-child(5) {
+    display: none;
+  }
+
+  .nav_main ul li:nth-child(6) {
+    display: none;
+  }
+
   .nav_main ul li:nth-child(7) {
     display: none;
   }
