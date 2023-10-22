@@ -3,16 +3,17 @@
     --text-color: #1b1b1b;
     --text-hover: #333;
     --element-color:#B07B54;
+    --element-color2: #867163;
     --background-color: #ead9ce;
     --background-white: #F2F2F2;
     --font-drawing: 'Fleur De Leah', cursive;
-    --font-h1eP: 'Baskervville', serif;
+    --font-alternative: 'Baskervville', serif;
     --font-Lora: 'Lora', serif;
   }
 
 html p{
     font-family: var(--font-Lora);
-    color: var(--text-color)
+    /* color: var(--text-color) */
 }
 
 body{
@@ -21,3 +22,7 @@ body{
     margin: 0 auto;
 }
 
+::selection{
+    background-color: var(--element-color);
+    color: var(--text-black);
+}
