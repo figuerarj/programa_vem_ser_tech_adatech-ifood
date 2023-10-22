@@ -61,7 +61,8 @@
   /* width: auto; */
   /* height: 100%; */
   display: block;
-  /* margin: 0 auto; */
+  margin: 20px auto;
+
 }
 
 /* SEGUNDA AREA --- sobre mim*/
@@ -126,3 +127,89 @@ td {
   padding: 8px;
   text-align: center;
 }
+
+/* FORM */
+
+#form-contact h2 {
+  text-align: center;
+  font-family: var(--font-alternative);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#form-contact p {
+  text-align: center;
+  font-family: var(--font-alternative);
+
+  margin-bottom: 20px;
+}
+
+#form-contact img {
+    width: 260px;
+    border-radius: 10px;
+    border: 1px solid var(--background-color);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+
+}
+
+#form-contact {
+  height: fit-content;
+  padding: 100px 0;
+  background-color: var(--background-white);
+}
+
+#form-contact form {
+  width: 80%;
+  margin: auto;
+}
+
+.block {
+  width: 100%;
+  text-align: center;
+}
+
+#form-contact label {
+  margin: 20px 0;
+  display: block;
+  text-align: left;
+}
+
+#form-contact label input {
+  border: 1px solid var(--element-color);
+  border-radius: 8px;
+}
+
+#form-contact label input:not([type="checkbox"]) {
+  width: 357px;
+  height: 32px;
+  padding-left: 10px;
+}
+
+#form-contact #email {
+    width: 352px;
+  }
+
+#form-contact button {
+  background-color: var(--element-color);
+  color: #fff;
+  padding: 10px 20px;
+}
+
+#form-contact div {
+  display: inline-block;
+}
+
+#message {
+  width: 415px;
+  display: block;
+}
+
+#form-contact .inputs {
+  margin-left: 30px;
+}
+
+button {
+    display: block;
+    width: 132px;
+    margin: 0 auto;
+  }
