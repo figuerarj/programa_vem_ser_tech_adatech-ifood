@@ -1,27 +1,18 @@
 #main {
   width: 100%;
-
   background-color: blue;
 }
 /* PRIMEIRA AREA */
 .home {
   display: table;
   width: 100%;
-  /* height: 100vh; */
   background-color: var(--background-color);
   text-align: center;
 }
 
-/* .centralizar{
-    display: table-cell;
-    text-align: middle;
-    
-} */
-
 .home_texto {
   width: 45%;
   display: inline-block;
-  /* margin-right: 26px; */
   text-align: left;
   vertical-align: middle;
   float: none;
@@ -30,13 +21,11 @@
 
 .home_texto h1 {
   color: var(---text-color);
-
   font-size: 3.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   font-family: "Fleur De Leah", cursive;
-
   width: 100%;
   margin-bottom: 5%;
 }
@@ -50,41 +39,30 @@
 .home_img {
   width: 40%;
   display: inline-block;
-  /* margin-left: auto; */
-  /* max-height: fit-content; */
   vertical-align: middle;
   text-align: center;
   float: none;
 }
 
 .home_img img {
-  /* width: auto; */
-  /* height: 100%; */
   display: block;
   margin: 20px auto;
-
 }
+/* Best Sellers */
 
-/* SEGUNDA AREA --- sobre mim*/
 
-.sobre_nos {
-  /* display: table;
-    width: 100%; */
+
+/* About us ---------------------------------*/
+
+.about_us {
   background-color: var(--background-color);
-  /* text-align: left; */
 }
 
-/* .sobre_mim-centralizar{
-    display: inline-block;
-} */
-
-.sobre_nos_container-img {
+.about_us_container-img {
   display: inline-block;
-  width: fit-content;
-  overflow: auto;
 }
 
-.sobre_nos_container-texto {
+.about_us_container-texto {
   display: inline-block;
   width: 30%;
   margin-left: 5%;
@@ -92,33 +70,35 @@
   margin-top: 260px;
 }
 
-.sobre_nos_container-texto h2 {
+.about_us_container-texto h2 {
   font-family: var(--font-alternative);
   font-size: 2.5rem;
-
   margin-bottom: 10px;
 }
 
-.sobre_nos_container-texto p {
+.about_us_container-texto p {
   font-size: 0.9rem;
   font-style: normal;
   font-weight: 300;
   line-height: 2rem;
 }
 
-/* .sobre_mim_container-img img{
-    
-} */
-
 /* TABLE */
 #table {
   width: 100%;
-  margin: 0 auto;
+  background-color: var(--background-white);
+  padding: 100px 0;
+}
+
+#table h2 {
+  font-family: var(--font-alternative);
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 #table table {
-  width: 60%;
-  border-collapse: collapse;
+  display: inline-table;
 }
 
 #table th,
@@ -126,6 +106,7 @@ td {
   border: 1px solid #000;
   padding: 8px;
   text-align: center;
+  font-family: var(--font-Lora);
 }
 
 /* FORM */
@@ -140,22 +121,20 @@ td {
 #form-contact p {
   text-align: center;
   font-family: var(--font-alternative);
-
   margin-bottom: 20px;
-}
-
-#form-contact img {
-    width: 260px;
-    border-radius: 10px;
-    border: 1px solid var(--background-color);
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
-
 }
 
 #form-contact {
   height: fit-content;
   padding: 100px 0;
-  background-color: var(--background-white);
+  background-color: var(--background-color);
+}
+
+#form-contact img {
+  width: 260px;
+  border-radius: 10px;
+  border: 1px solid var(--background-color);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 #form-contact form {
@@ -186,8 +165,8 @@ td {
 }
 
 #form-contact #email {
-    width: 352px;
-  }
+  width: 352px;
+}
 
 #form-contact button {
   background-color: var(--element-color);
@@ -209,7 +188,66 @@ td {
 }
 
 button {
-    display: block;
-    width: 132px;
-    margin: 0 auto;
-  }
+  display: block;
+  width: 132px;
+  margin: 0 auto;
+  font-weight: bolder;
+}
+
+/* FOOTER ---------------------- */
+
+#footer {
+  background-color: var(--background-white);
+  text-align: center;
+}
+
+#footer section {
+  height: auto;
+  padding: 40px;
+}
+
+#footer section div {
+  text-align: left;
+  margin-left: 40px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#footer section div h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: var(--font-alternative);
+}
+
+#footer section div p {
+  margin-bottom: 8px;
+  line-height: normal;
+}
+
+#footer section div p a {
+  color: var(--element-color2);
+  text-decoration: none;
+}
+
+#footer section div h2 a {
+  color: var(--element-color);
+  text-decoration: none;
+}
+
+#footer section:last-child {
+  border-top: 1px solid var(--element-color);
+  color: var(--element-color2);
+  padding: 20px;
+}
+
+.github a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: var(--element-color);
+  font-weight: bolder;
+}
+
+.github {
+  margin-top: 10px;
+}
