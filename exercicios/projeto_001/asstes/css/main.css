@@ -50,7 +50,55 @@
 }
 /* Best Sellers */
 
+#best_sellers {
+  background-color: var(--background-white);
+  padding: 20px;
+  height: fit-content;
+}
 
+#best_sellers .articleContainer {
+    display: inline-block;
+  width: 70%;
+  vertical-align: top;
+}
+
+#best_sellers .articleContainer article{
+    background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 30%;
+  display: inline-block;
+}
+
+#best_sellers .articleContainer article{
+    margin: 10px 0;
+    border-radius: 20px;
+}
+
+#best_sellers .articleContainer article figure{
+    margin-bottom: 8px;
+}
+
+#best_sellers .articleContainer article figure img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price{
+
+}
+
+#best_sellers aside{
+    padding: 20px;
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+#best_sellers .articleContainer aside h2{
+    
+}
 
 /* About us ---------------------------------*/
 
