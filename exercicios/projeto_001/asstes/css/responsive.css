@@ -50,8 +50,31 @@
       width: 100%;
     }
     /* about us---------------------- */
-    .about_us_container-img img {
-      width: 440px;
-      height: 400px;
+    .about_us_container-img {
+      display: block;
     }
+
+    .about_us_container-img img {
+      display: block;
+      width: 100%;
+    }
+
+    .about_us_container-texto {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .about_us_container-texto p {
+      font-size: 0.7rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 2rem;
+      padding: 0 50px;
+    }
+
+
+
   }
