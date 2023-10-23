@@ -2,11 +2,17 @@
   width: 100%;
   background-color: blue;
 }
+
+#main_header{
+    position: fixed;
+    border: 2px solid #D9CCC2;
+}
 /* PRIMEIRA AREA */
 #home {
     display: block;
     background-color: var(--background-color);
     text-align: right;
+    margin-top: 142px;
   }
 
 .home_texto {
@@ -158,6 +164,7 @@
 
 #about_us {
   background-color: var(--background-color);
+  height: max-content;
 }
 
 .about_us_container-img {
@@ -228,7 +235,7 @@ td {
 
 #form-contact {
   height: fit-content;
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: var(--background-color);
 }
 
