@@ -361,6 +361,8 @@ button {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 1430px) {
-
+@media screen and (max-width: 768px) {
+    #main_header{
+        background-color: red;
+    }
 }
