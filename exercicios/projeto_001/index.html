@@ -268,7 +268,7 @@
         <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28056.99114459705!2d-81.46085950715756!3d28.47584585136642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77ef14378c49b%3A0x99df881a6a192bfe!2sOrlando%20Outlet%20Marketplace!5e0!3m2!1sen!2sbr!4v1697980391175!5m2!1sen!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 
         <div>
-            <h2><a href="">Shop</a></h2>
+            <h2><a href="#home">Home</a></h2>
             <p><a href="">Collections</a></p>
             <p><a href="">Rings</a></p>
             <p><a href="">Bracelets</a></p>
@@ -276,9 +276,9 @@
             <p><a href="">Wedding Rings</a></p>            
         </div>
         <div>
-            <h2><a href="">About</a></h2>
-            <p><a href="">About Us</a></p>
-            <p><a href="">Contact</a></p>
+            <h2><a href="#about_us">About</a></h2>
+            <p><a href="#about_us">About Us</a></p>
+            <p><a href="#form-contact">Contact</a></p>
             <p><a href="">Privacy Policy</a></p>
             <p><a href="">FAQ’s</a></p>
                       
@@ -295,5 +295,30 @@
         <p class="github">Created by <a href="https://github.com/figuerarj">Rodrigo Santos</a> </p>
       </section>
     </footer>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Encontre a altura do cabeçalho
+          var headerHeight = document.querySelector("#main_header").offsetHeight;
+        
+          // Adicione um evento de clique ao link "About Us"
+          document.querySelector('a[href="#about_us"]').addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            // Encontre a posição da âncora
+            var target = document.getElementById("about_us");
+            var targetPosition = target.offsetTop;
+            
+            // Role suavemente para a âncora, considerando a altura do cabeçalho
+            window.scrollTo({
+              top: targetPosition - headerHeight,
+              behavior: "smooth"
+            });
+          });
+        });
+        </script> -->
+        <script src="script.js"></script>
+            
+
   </body>
 </html>
