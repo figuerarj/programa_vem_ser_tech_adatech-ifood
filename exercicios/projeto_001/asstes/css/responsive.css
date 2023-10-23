@@ -1,80 +1,197 @@
-@media screen and (max-width: 768px) {
-    #main {
-      width: 100vw;
-    }
-    #home {
-      display: block;
-      margin-top: 200px;
-      height: 100%;
-      
-    }
-  
-    .home_texto {
-      display: block;
-      text-align: center;
-      width: 440px;
-      margin: 0 auto;
-    }
-  
-    .home_texto h1 {
-      display: block;
-      text-align: center;
-      width: 440px;
-    }
-  
-    .home_texto p {
-      display: inline;
-      text-align: center;
-      width: 400px;
-      padding: 30px;
-    }
-  
-    .home_img {
-      display: block;
-      width: auto;
-    }
-  
-    .home_img img {
-      display: block;
-      width: 100%;
-    }
-    /* ---------------------trendy */
-    #trendy {
-      padding: 20px;
-    }
-    #trendy aside {
-      display: none;
-    }
-  
-    #trendy .articleContainer{
-      width: 100%;
-    }
-    /* about us---------------------- */
-    .about_us_container-img {
-      display: block;
-    }
-
-    .about_us_container-img img {
-      display: block;
-      width: 100%;
-    }
-
-    .about_us_container-texto {
-      display: inline-block;
-      width: 100%;
-      vertical-align: top;
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .about_us_container-texto p {
-      font-size: 0.7rem;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 2rem;
-      padding: 0 50px;
-    }
-
-
-
+@media screen and (max-width: 1199px) {
+  #main {
+    width: 100vw;
   }
+  #home {
+    display: block;
+    margin-top: 200px;
+    height: 100%;
+  }
+
+  .home_texto {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .home_texto h1 {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .home_texto p {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .home_img {
+    display: block;
+    width: auto;
+  }
+
+  .home_img img {
+    display: block;
+    width: 100%;
+  }
+  /* ---------------------trendy */
+  #trendy {
+    padding: 20px;
+  }
+  #trendy aside {
+    display: none;
+  }
+
+  #trendy .articleContainer {
+    width: 100%;
+  }
+
+  #trendy .articleContainer article {
+    padding: 0;
+  }
+
+  #trendy .articleContainer article figure img {
+    width: 80%;
+    height: 80%;
+  }
+
+  #trendy .articleContainer article figure figcaption {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .price {
+    text-align: center;
+  }
+  /* about us---------------------- */
+  .about_us_container-img {
+    display: block;
+  }
+
+  .about_us_container-img img {
+    display: block;
+    width: 100%;
+  }
+
+  .about_us_container-texto {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .about_us_container-texto p {
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2rem;
+    padding: 0 50px;
+  }
+
+  /* TABLE---- */
+
+  #table{
+    padding: 20px 0;
+  }
+
+  #table h2 {
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  .block {
+    overflow-x: scroll;
+    text-align: center;
+    margin-left: 5%;
+    width: 90%;
+  }
+  #table table {
+    display: inline;
+  }
+
+  /* FORM---------------- */
+
+  #form-contact {
+    height: auto;
+    padding: 20px 0;
+    
+  }
+
+  #form-contact form {
+    width: 94%;
+    margin: auto;
+  }
+
+  #form-contact h2 {
+    margin-bottom: 10px;
+  }
+
+  
+  #form-contact div {
+    display: block;
+  }
+
+  #form-contact img {
+    width: 97%;
+    max-width: fit-content;
+  }
+
+  #form-contact .inputs {
+    margin-left: 0;
+  }
+
+
+  #form-contact label input:not([type="checkbox"]) {
+    width: 90%;
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+
+  #form-contact label {
+    
+    text-align: center;
+  }
+
+  #form-contact #email {
+    width: 90%;
+  }
+
+  #message {
+    display: inline;
+    width: 90%;
+  }
+
+  /* FOOTER--------------- */
+
+  #footer section div {
+    text-align: center;
+    margin-left: 0px;
+    display: block;
+    margin-bottom: 40px;
+
+}
+
+#footer section {
+  height: auto;
+  padding: 40px 40px 0 40px;
+}
+
+}
+
+
+@media screen and ((max-width: 1323px) and (min-width: 1200px)) {
+  .articleContainer h2{
+    color: var(--text-black);
+  }
+
+  /* .articleContainer{
+    width: 65%;
+  } */
+  #trendy .articleContainer {
+    display: inline-block;
+    width: 65%;
+}
+}
