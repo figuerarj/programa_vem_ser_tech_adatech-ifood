@@ -363,6 +363,57 @@ button {
 
 @media screen and (max-width: 768px) {
     #main_header{
-        background-color: red;
+        
     }
+    #home{
+display: block;
+margin-top: 200px;
+height: 790px;
+    }
+
+    .home_texto{
+        display: block;
+        text-align: center;
+        width: 440px;
+        
+    }
+
+    .home_texto h1{
+        display: block;
+        text-align: center;
+        width: 440px;
+        
+    }
+
+    .home_texto p{
+        display: inline;
+        text-align: center;
+        width: 400px;
+        padding: 30px;
+    }
+
+    .home_img{
+        display: block;
+    }
+
+    .home_img img{
+        display: block;
+        width: 440px;
+    }
+/* ---------------------trendy */
+#trendy{
+    padding: 20px;
+}
+#trendy aside{
+    display: none;
+}
+
+}
+
+
+/* about us---------------------- */
+
+.about_us_container-img img{
+    width: 440px;
+    height: 400px;
 }
