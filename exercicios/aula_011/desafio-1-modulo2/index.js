@@ -55,7 +55,24 @@ function convertNumber(number) {
   return result;
 }
 botao.addEventListener('click', () => {
+  
+
+  
+  if (resultHtml.classList.contains('esconder')) {
+    
+    resultHtml.classList.remove('esconder');
+    
+    resultHtml.style.display = 'block';
+  } else {
+    
+    resultHtml.classList.add('esconder');
+    
+    resultHtml.style.display = 'none';
+  }
+
   const result = convertNumber(averageTotalRatings);
   resultHtml.innerHTML = `Rating: ${result}<br>`;
+
+
 });
 

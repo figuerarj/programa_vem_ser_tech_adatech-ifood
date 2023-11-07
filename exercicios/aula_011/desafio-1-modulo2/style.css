@@ -164,3 +164,7 @@ button, button::after {
     border-radius: 20px;
     border: 2px solid #48e4d6;
   }
+
+  .esconder{
+    display:none;
+  }
