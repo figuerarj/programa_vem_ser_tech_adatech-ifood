@@ -19,6 +19,7 @@ const totalClientes2 = document.querySelector(".totalClientes-2");
 const totalClientes3 = document.querySelector(".totalClientes-3");
 const totalClientes4 = document.querySelector(".totalClientes-4");
 const totalClientes5 = document.querySelector(".totalClientes-5");
+const botao = document.querySelector(".botao");
 const resultHtml = document.querySelector(".resultado");
 totalClientes1.innerHTML = rating.star_1;
 totalClientes2.innerHTML = rating.star_2;
@@ -50,6 +51,11 @@ function convertNumber(number) {
   if (result > number) {
     result -= 0.5;
   }
-  resultHtml.innerHTML = `Estrelas:${result}<br> `;
+  
   return result;
 }
+botao.addEventListener('click', () => {
+  const result = convertNumber(averageTotalRatings);
+  resultHtml.innerHTML = `Rating: ${result}<br>`;
+});
+
