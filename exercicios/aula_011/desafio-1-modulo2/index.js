@@ -7,11 +7,11 @@ const stars = {
 };
 
 const rating = {
-  star_1: 0,
-  star_2: 0,
-  star_3: 5,
+  star_1: 23,
+  star_2: 40,
+  star_3: 50,
   star_4: 15,
-  star_5: 10,
+  star_5: 100,
 };
 
 const totalClientes1 = document.querySelector(".totalClientes-1");
