@@ -1,10 +1,10 @@
 body {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 100vh;
     background: #bfecf7;
-    flex-direction: column;
+    
   }
   
   .box{
@@ -40,24 +40,28 @@ body {
     text-shadow: 3px 3px 1px #bfecf7;
     padding: 8px;
     text-align: center;
+    
   }
 
   tr:nth-child(even) {
     background-color: #b9e0fe; /* Cor de fundo para linhas pares */
   }
 
-  /* button{
-    color:#009688;
-   margin-top: 50px;
-   padding: 40px;
-   font-size: 2rem;
-   font-weight: 700;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   border-radius: 30px;
-  } */
+ 
 
-  th{
+ .thead{
     text-decoration: underline;
+  }
+
+  .thtotal{
+    background-color: #8bbcb7;
+    padding: 20px;
+    font-size: 3rem;
+  }
+
+  .table-js{
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
   /* button */
@@ -89,7 +93,7 @@ button, button::after {
     --slice-4: inset(40% -6px 43% 0);
     --slice-5: inset(80% -6px 5% 0);
     
-    content: 'AVAILABLE NOW';
+    content: 'CLICK HERE!!!!';
     display: block;
     position: absolute;
     top: 0;
@@ -157,7 +161,7 @@ button, button::after {
     font-weight: 500;
     font-size: 4rem;
     color:black;
-    background-color: #F8F005;
+    background-color: #d6f2f9;
     padding: 30px;
     text-align: center;
     margin-top: 20px;
@@ -168,3 +172,18 @@ button, button::after {
   .esconder{
     display:none;
   }
+
+  .box-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .star_div{
+padding:20px;
+display: flex;
+justify-content: space-evenly;
+color: #1a9e8f;
+text-shadow: 2px 1px 2px  #6a6a6a;
+  }
+  

@@ -7,11 +7,11 @@ const stars = {
 };
 
 const rating = {
-  star_1: 1,
-  star_2: 16,
-  star_3: 19,
-  star_4: 30,
-  star_5: 20,
+  star_1: 0,
+  star_2: 0,
+  star_3: 5,
+  star_4: 15,
+  star_5: 10,
 };
 
 const totalClientes1 = document.querySelector(".totalClientes-1");
@@ -40,6 +40,12 @@ const sumRatings =
   rating.star_1 + rating.star_2 + rating.star_3 + rating.star_4 + rating.star_5;
 const averageTotalRatings = sumRatings / totalOfVotes;
 
+// percentage
+const star_1Percent = (rating.star_1 / sumRatings) * 100;
+const star_2Percent = (rating.star_2 / sumRatings) * 100;
+const star_3Percent = (rating.star_3 / sumRatings) * 100;
+const star_4Percent = (rating.star_4 / sumRatings) * 100;
+const star_5Percent = (rating.star_5 / sumRatings) * 100;
 
 // new round number
 function convertNumber(number) {
@@ -51,28 +57,83 @@ function convertNumber(number) {
   if (result > number) {
     result -= 0.5;
   }
-  
+
   return result;
 }
-botao.addEventListener('click', () => {
-  
 
-  
-  if (resultHtml.classList.contains('esconder')) {
-    
-    resultHtml.classList.remove('esconder');
-    
-    resultHtml.style.display = 'block';
+const result = convertNumber(averageTotalRatings)
+
+
+botao.addEventListener("click", () => {
+  if (resultHtml.classList.contains("esconder")) {
+    resultHtml.classList.remove("esconder");
+
+    resultHtml.style.display = "block";
   } else {
-    
-    resultHtml.classList.add('esconder');
-    
-    resultHtml.style.display = 'none';
+    resultHtml.classList.add("esconder");
+
+    resultHtml.style.display = "none";
   }
 
-  const result = convertNumber(averageTotalRatings);
-  resultHtml.innerHTML = `Rating: ${result}<br>`;
-
-
+  let star = "";
+ 
+  if (result >= 0 && result < 0.5) {
+    star = `0`
+  } else if (result >= 0.5 && result < 1) {
+    star = `<i class="fa-solid fa-star-half-stroke"></i>`
+  } else if (result >= 1 && result < 1.5) {
+    star = `<i class="fa-solid fa-star"></i>`
+  } else if (result >= 1.5 && result < 2) {
+    star = `<i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>`
+  } else if (result >= 2 && result < 2.5) {
+    star = `<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>`
+  } else if (result >= 2.5 && result < 3) {
+    star = `<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>`
+  } else if (result >= 3 && result < 3.5) {
+    star = `<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>`
+  } else if (result >= 3.5 && result < 4) {
+    star = `<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>`
+  } else if (result >= 4 && result < 4.5) {
+    star = `<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>`
+  } else if (result >= 4.5 && result < 5) {
+    star = `<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>`
+  } else if (result === 5) {
+    star = `<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>`
+  } else {
+    star = `-`
+  }
+  
+  // 
+  resultHtml.innerHTML = `
+  <table class="table-js">
+    <tbody>
+      <tr>
+        <td>1 star</td>
+        <td>${star_1Percent.toFixed(2)}%</td>
+      </tr>
+      <tr>
+        <td>2 stars</td>
+        <td>${star_2Percent.toFixed(2)}%</td>
+      </tr>
+      <tr>
+        <td>3 stars</td>
+        <td>${star_3Percent.toFixed(2)}%</td>
+      </tr>
+      <tr>
+        <td>4 stars</td>
+        <td>${star_4Percent.toFixed(2)}%</td>
+      </tr>
+      <tr>
+        <td>5 stars</td>
+        <td>${star_5Percent.toFixed(2)}%</td>
+      </tr>
+      <th class="thtotal">Average Rating:</th>
+      <td><strong>${averageTotalRatings.toFixed(2)}(${result})</strong></td>
+      </tbody>
+  </table>
+  <div class="star_div">${star}</div>
+ 
+`;
 });
+
 
