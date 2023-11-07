@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     align-items: center;
@@ -54,7 +55,7 @@ body {
   }
 
   .thtotal{
-    background-color: #8bbcb7;
+    background-color: #b9e0fe;
     padding: 20px;
     font-size: 3rem;
   }
@@ -183,7 +184,22 @@ button, button::after {
 padding:20px;
 display: flex;
 justify-content: space-evenly;
-color: #1a9e8f;
+color: #1a7b9e;
 text-shadow: 2px 1px 2px  #6a6a6a;
   }
+
+  .b_blue{
+    background-color: #96d0e5;
+    text-shadow: none;
+  }
   
+  .b_blue2{
+    background-color: rgb(120, 197, 225);
+    text-shadow: none;
+  }
+
+  .t_box{
+    border: 1px solid #78bad2;
+    box-shadow: 1px 2px 4px #1a7b9e;
+    
+  }

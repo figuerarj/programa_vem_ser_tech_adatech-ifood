@@ -106,29 +106,40 @@ botao.addEventListener("click", () => {
   // 
   resultHtml.innerHTML = `
   <table class="table-js">
+    <thead>
+    <th colspan="2">Monthly Report - September 2023</th>
+    </thead>
     <tbody>
       <tr>
-        <td>1 star</td>
+        <td><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> - 1 star<span style="visibility: hidden;">s<span> </td>
         <td>${star_1Percent.toFixed(2)}%</td>
       </tr>
       <tr>
-        <td>2 stars</td>
+        <td><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></i> - 2 stars</td>
         <td>${star_2Percent.toFixed(2)}%</td>
       </tr>
       <tr>
-        <td>3 stars</td>
+        <td><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"><i class="fa-regular fa-star"></i></i> - 3 stars</td>
         <td>${star_3Percent.toFixed(2)}%</td>
       </tr>
       <tr>
-        <td>4 stars</td>
+        <td><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> - 4 stars</td>
         <td>${star_4Percent.toFixed(2)}%</td>
       </tr>
       <tr>
-        <td>5 stars</td>
+        <td><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></i> - 5 stars</td>
         <td>${star_5Percent.toFixed(2)}%</td>
       </tr>
-      <th class="thtotal">Average Rating:</th>
-      <td><strong>${averageTotalRatings.toFixed(2)}(${result})</strong></td>
+      <thead class="t_box">
+      <tr>
+      <th class="b_blue">Total of votes:</th>
+      <td class="b_blue"><strong>${totalOfVotes.toFixed(0)}</td>
+      </tr>
+      <tr>
+      <th class="b_blue2">Average Rating:</th>
+      <td class="b_blue2"><strong>${averageTotalRatings.toFixed(2)}<br>(${result})</strong></td>
+      </tr>
+      </thead>
       </tbody>
   </table>
   <div class="star_div">${star}</div>
