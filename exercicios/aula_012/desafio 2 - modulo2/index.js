@@ -10,18 +10,18 @@ const partners = [
     { parceirosId: '63351859919', nome: 'Rafael Souza' },
     { parceirosId: '84297701780', nome: 'Carlos Oliveira' },
    ]
-let PF = []
-let PJ = []
+let pf = []
+let pj = []
 
    partners.forEach((parceiro)=>{
     if(parceiro.parceirosId.length === 14){
-        PJ.push([parceiro])
+        pj.push([parceiro])
     } else {
-        PF.push([parceiro])
+        pf.push([parceiro])
     }
    
    });
 
+const parceirosAgrupados = {pf,pj};
+console.log(parceirosAgrupados)
 
-   const parceirosAgrupados = {PF,PJ};
-   console.log(parceirosAgrupados)
