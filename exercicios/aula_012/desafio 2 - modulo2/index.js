@@ -1,4 +1,4 @@
-const partners = [
+const parceiros = [
     { parceirosId: '19660156627897', nome: 'Fernanda Santos' },
     { parceirosId: '23998058019370', nome: 'Rafael Souza' },
     { parceirosId: '92291338611', nome: 'Maria Silva' },
@@ -13,7 +13,7 @@ const partners = [
 let pf = []
 let pj = []
 
-   partners.forEach((parceiro)=>{
+   parceiros.forEach((parceiro)=>{
     if(parceiro.parceirosId.length === 14){
         pj.push([parceiro])
     } else {
