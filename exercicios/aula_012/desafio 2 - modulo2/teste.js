@@ -14,7 +14,7 @@ const albuns = [
 ];
 
 const sorted = albuns.sort((a,b)=>{
-    return a.name - b.name;
+    return a.name.localeCompare(b.name);
 })
 
 console.log(sorted)
