@@ -1,5 +1,8 @@
 const resultado = document.getElementById("texto");
-resultado.innerHTML = `<p> </p>`;
+
+window.addEventListener('beforeunload', function() {
+    resultado.innerHTML = '';
+});
 
 const nome = prompt("Escreva o seu nome:");
 const nomeMaiusculo = nome.charAt(0).toUpperCase() + nome.substring(1);
