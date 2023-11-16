@@ -15,7 +15,7 @@ itens.forEach(item => {
     if (partes.length === 2) {
         const produtoValor = partes[0].split('/');
         const produto = produtoValor[0];
-        const valor = parseFloat(produtoValor[1].replace('valor', ''));
+        const valor = parseFloat(produtoValor[1].replace('valor', '')); //deleta a palavra valor e transforma em valor
         const cupom = partes[1].replace('cupom','');
         console.log(produtoValor)
         
