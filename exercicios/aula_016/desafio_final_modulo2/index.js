@@ -5,17 +5,17 @@ let tasks = [
     description: "lavar a roupa da semana",
   },
   {
-    id: 1700334667097,
+    id: 1700335567097,
     title: "estudar para o exame",
     description: "estudar o material da prova",
   },
   {
-    id: 1700334667097,
+    id: 1700334777097,
     title: "ir para natacao",
     description: "nao esquecer da natação no SESI",
   },
   {
-    id: 1700334667097,
+    id: 1700300667097,
     title: "tirar o lixo",
     description: "pegar o lixo da cozinha e levar pra fora.",
   },
@@ -78,34 +78,66 @@ function editDescriptionTask(title, newDescription) {
     } else {
       console.log(`Descrição inexistente! Selecione uma nova tarefa para editar a descrição.`);
     }
-  }
+}
+
+function tasksList(){
+    const tasksList = tasks.map(item => item.title);
+    console.table(tasksList)
+}
 
 
-console.table(tasks);
-editDescriptionTask("ir para natacao", "aula cancelada!");
-console.table(tasks);
+
+function findTaskById(id){
+    const taskFounded = tasks.find((item) => item.id == id);
+    console.log(taskFounded)
+    const index = tasks.indexOf(taskFounded);
+    console.log(index)
+
+    if(taskFounded){
+        console.log([taskFounded]);
+    } else{
+        console.log(`Id(${id}) não encontrado.`);
+        
+    }
+}
 
 
-//TODO lista de tarefas
+
+
+
 //TODO obter uma tarefa - usando o ID
 
-//simulação 1
+//simulação 1 - criar uma tarefa
 // createTask("lavar roupa", "teste teste teste")
 // createTask("lavar o carro", "teste teste teste")
 // console.table(tasks)
 // console.log("----------------")
 
-//simulação 2
+//simulação 2 - deletar uma tarefa
 // removeTask("lavar roupa")
 // removeTask("lavar o carro")
 // console.table(tasks)
 // console.log("----------------")
 
-//simulação 3
+//simulação 3 - editar Título
 // editTitleTask("lavar roupa", "lavar cabelo")
 // editTitleTask("lavar o carro", "lavar o chão")
 // console.table(tasks)
 // console.log("----------------")
+
+//simulação 4 - editar Descrição (usando o Título como referencia)
+// console.table(tasks);
+// // editDescriptionTask("ir para natacao", "aula cancelada!");
+// // editDescriptionTask("ir natacao", "aula cancelada!");
+// console.table(tasks);
+
+//simulação 5 - lista de tarefas
+// console.table(tasks)
+// tasksList()
+
+//simulação 6 - Find by Id
+// findTaskById(1754335567097)
+// findTaskById(1700335567097)
 
 // Edição usando o prompt
 // function editTitleTask(title){
