@@ -3,113 +3,237 @@ let tasks = [
     id: 1700334667097,
     title: "lavar roupa",
     description: "lavar a roupa da semana",
+    deleted: false,
   },
   {
     id: 1700335567097,
     title: "estudar para o exame",
     description: "estudar o material da prova",
+    deleted: false,
   },
   {
     id: 1700334777097,
     title: "ir para natacao",
     description: "nao esquecer da natação no SESI",
+    deleted: false,
+  },
+  {
+    id: 1700300643097,
+    title: "jogar futebol",
+    description: "pegar o lixo da cozinha e levar pra fora.",
+    deleted: true,
   },
   {
     id: 1700300667097,
     title: "tirar o lixo",
     description: "pegar o lixo da cozinha e levar pra fora.",
+    deleted: false,
   },
 ];
-let tasksDeleted = [];
+
+function validarInput(
+  texto,
+  quantidadeMinima,
+  naoPodeApenasNumero,
+  naoTemDuplicado
+) {
+  let entradaValida = false;
+  let valor = "";
+  while (!entradaValida) {
+    try {
+      valor = prompt(texto);
+
+      if (valor === null) {
+        return undefined;
+      }
+
+      if (valor.length < quantidadeMinima) {
+        throw new Error(
+          `Você não pode criar um título com menos de ${quantidadeMinima} caracteres.`
+        );
+      }
+      if (naoPodeApenasNumero && valor.replace(/\d+/, "").length === 0) {
+        throw new Error("Você não pode criar um título usando apenas números.");
+      }
+      if (
+        naoTemDuplicado &&
+        tasks.find((item) => item.title == valor) !== undefined
+      ) {
+        throw new Error(
+          "Já existe essa tarefa! Modificar o nome ou editar a tarefa existente"
+        );
+      }
+
+      entradaValida = true;
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+  return valor;
+}
 
 function createTask(title, description) {
-  const idNumber = new Date().getTime();
-
-  if (tasks.find((item) => item.title == title) !== undefined) {
-    console.log(
-      "Já existe essa tarefa! Crie uma outra ou edite a tarefa existente"
-    );
-  } else {
+  try {
+    const idNumber = new Date().getTime();
     tasks.push({
       id: idNumber,
       title: title,
       description: description,
     });
-    console.log(
-      `${tasks.find((item) => item.title == title)} foi criado com sucesso!`
-    );
+    alert(`Tarefa "${title}" foi criada com sucesso!`);
+  } catch (error) {
+    console.error(error.message);
   }
 }
 
-function removeTask(title) {
-  const taskToDelete = tasks.find((item) => item.title == title);
-
-  if (taskToDelete) {
-    tasksDeleted.push(taskToDelete); // envia para a pasta tasksDeleted o arquivo que será deletado da array Tasks.
-    const index = tasks.indexOf(taskToDelete); // pega o index do objeto.
-    tasks.splice(index, 1); //remove do array tasks o objeto selecionado.
-    console.log("Tarefa deletada com sucesso!");
-  } else {
-    console.log("Tarefa não existente!");
+function removeTask(index) {
+  try {
+    const deleted = tasks[index].title;
+    // tasks.splice(index, 1); //remove do array tasks, o objeto selecionado.
+    tasks[index].deleted = true;
+    alert(`Tarefa "${[deleted]}" foi removida com sucesso!`);
+  } catch (error) {
+    console.error(error.message);
   }
 }
 
-function editTitleTask(title, newTitle) {
-  const taskToEdit = tasks.find((item) => item.title == title);
-  const index = tasks.indexOf(taskToEdit); // pega o index do objeto.
-  
-  if (taskToEdit) {
+function editTitleTask(index, newTitle) {
+  try {
     console.log(`Título "${tasks[index].title}" foi localizado!`);
     tasks[index].title = newTitle;
-    console.log(`Título foi modificado para "${tasks[index].title}".`);
-  } else {
-    console.log(`Título inexistente! Selecione um novo título para editar.`);
+    alert(`Título foi modificado para "${tasks[index].title}".`);
+  } catch (error) {
+    console.error(error.message);
   }
 }
 
-function editDescriptionTask(title, newDescription) {
-    const taskToEdit = tasks.find((item) => item.title == title);
-    const index = tasks.indexOf(taskToEdit); // pega o index do objeto.
-    
-    if (taskToEdit) {
-      console.log(`A descrição "${tasks[index].description}" foi localizado!`);
-      tasks[index].description = newDescription;
-      console.log(`A descrição foi modificada para "${tasks[index].description}".`);
-    } else {
-      console.log(`Descrição inexistente! Selecione uma nova tarefa para editar a descrição.`);
-    }
+function editDescriptionTask(index, newDescription) {
+  try {
+    console.log(`A descrição "${tasks[index].description}" foi localizada!`);
+    tasks[index].description = newDescription;
+    alert(`A descrição foi modificada para "${newDescription}".`);
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 
-function tasksList(){
-    const tasksList = tasks.map(item => item.title);
-    console.table(tasksList)
+function tasksList() {
+  try {
+    const formatedTasksList = tasks
+      .map((item, index) => `${index} - ${item.title}\n`)
+      .filter((item) => item.deleted == false);
+    // console.log(formatedTasksList)
+    return formatedTasksList;
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 
+function selectIndexTask() {
+  let indexTarefaSelecionada = parseInt(
+    prompt(`Selecione a tarefa que você deseja editar?\n${tasksList()}`)
+  );
 
+  return indexTarefaSelecionada;
+}
 
-function findTaskById(id){
+function findTaskById(id) {
+  try {
     const taskFounded = tasks.find((item) => item.id == id);
-    console.log(taskFounded)
-    const index = tasks.indexOf(taskFounded);
-    console.log(index)
+    // const index = tasks.indexOf(taskFounded);
 
-    if(taskFounded){
-        console.log([taskFounded]);
-    } else{
-        console.log(`Id(${id}) não encontrado.`);
-        
+    if (!taskFounded) {
+      throw new Error(`Id(${id}) não encontrado.`);
     }
+    alert([taskFounded], `ID (${id}) localizado com sucesso!`);
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 
+let sair = false;
 
+while (sair == false) {
+  const option = prompt(
+    "Escolha a opção desejada:\n1-Adicionar uma tarefa.\n2-Editar uma tarefa salva.\n3-Remover uma tarefa salva.\n4-Listar todas as tarefas salvas\n5-Obter uma tarefa, através de um parâmetro.\n6-Sair."
+  );
+  switch (option) {
+    //create task
+    case "1":
+      const titulo = validarInput("Digite o título", 4, true, true);
+      if (titulo === undefined) {
+        alert("Operação cancelada. Voltando para o menu.");
+        break;
+      }
+      const description = validarInput("Digite a descrição", 20);
+      if (description === undefined) {
+        alert("Operação cancelada. Voltando para o menu.");
+        break;
+      }
+      createTask(titulo, description);
 
+      break;
+    //edit task
+    case "2":
+      idTarefaSelecionada = selectIndexTask();
 
+      const secondOption = prompt(
+        "Você deseja editar o título ou a descrição:\n1-Editar o título.\n2-Editar a descrição."
+      );
 
-//TODO obter uma tarefa - usando o ID
+      switch (secondOption) {
+        case "1":
+          const tituloEdit = validarInput(
+            "Digite o novo título:",
+            4,
+            true,
+            true
+          );
+          if (tituloEdit === undefined) {
+            alert("Operação cancelada. Voltando para o menu.");
+            break;
+          }
+          editTitleTask(indexTarefaSelecionada, tituloEdit);
+          break;
+
+        case "2":
+          const descriptionEdit = validarInput("Digite a nova descrição:", 20);
+          if (descriptionEdit === undefined) {
+            alert("Operação cancelada. Voltando para o menu.");
+            break;
+          }
+          editDescriptionTask(indexTarefaSelecionada, descriptionEdit);
+          break;
+
+        default:
+          break;
+      }
+      break;
+    case "3":
+      removeTask(selectIndexTask());
+      break;
+    case "4":
+      alert(tasksList());
+      break;
+    case "5":
+      console.log("obter tarefa pelo id");
+      break;
+    case "6":
+      sair = true;
+      alert("Lista de Tarefas Finalizada.");
+    default:
+      break;
+  }
+}
 
 //simulação 1 - criar uma tarefa
-// createTask("lavar roupa", "teste teste teste")
-// createTask("lavar o carro", "teste teste teste")
+// createTask("lavar roupa", "teste teste teste teste teste")
+// createTask("", "teste teste teste teste teste")
+// createTask("lavar o carro", "")
+// createTask("lavar o carro", "teste teste teste teste teste")
+// createTask("12121212121212", "teste teste teste teste teste");
+// createTask("eu", "teste teste teste teste teste");
+// createTask("lavar o carro", "teste");
 // console.table(tasks)
 // console.log("----------------")
 
