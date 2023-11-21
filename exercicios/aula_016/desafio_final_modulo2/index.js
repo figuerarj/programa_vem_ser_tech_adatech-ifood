@@ -31,6 +31,8 @@ let tasks = [
   },
 ];
 
+
+
 function validarInput(
   texto,
   quantidadeMinima,
@@ -86,12 +88,11 @@ function createTask(title, description) {
   }
 }
 
-function removeTask(index) {
+function removeTask(id) {
   try {
-    const deleted = tasks[index].title;
-    // tasks.splice(index, 1); //remove do array tasks, o objeto selecionado.
-    tasks[index].deleted = true;
-    alert(`Tarefa "${[deleted]}" foi removida com sucesso!`);
+    const taskFounded = tasks.find(task => task.id == id)
+    taskFounded.deleted = true;
+    alert(`Tarefa "${taskFounded.title}" foi removida com sucesso!`);
   } catch (error) {
     console.error(error.message);
   }
@@ -99,8 +100,9 @@ function removeTask(index) {
 
 function editTitleTask(id, newTitle) {
   try {
-    console.log(`Título "${tasks.find(id).title}" foi localizado!`);
-    tasks.find(id).title = newTitle;
+    const taskFounded = tasks.find(task => task.id == id)
+    console.log(`O Título "${taskFounded.title}" foi localizado!`);
+    taskFounded.title = newTitle;
     alert(`Título foi modificado para "${newTitle}".`);
   } catch (error) {
     console.error(error.message);
@@ -109,8 +111,9 @@ function editTitleTask(id, newTitle) {
 
 function editDescriptionTask(id, newDescription) {
   try {
-    console.log(`A descrição "${tasks.find(id).title}" foi localizada!`);
-    tasks.find(id).title = newDescription;
+    const taskFounded = tasks.find(task => task.id == id)
+    console.log(`A descrição "${taskFounded.description}" foi localizada!`);
+    taskFounded.description = newDescription;
     alert(`A descrição foi modificada para "${newDescription}".`);
   } catch (error) {
     console.error(error.message);
@@ -209,6 +212,8 @@ while (sair == false) {
           break;
       }
       break;
+    /
+    //remove task  
     case "3":
       removeTask(selectIdTask());
       break;
