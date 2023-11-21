@@ -97,20 +97,20 @@ function removeTask(index) {
   }
 }
 
-function editTitleTask(index, newTitle) {
+function editTitleTask(id, newTitle) {
   try {
-    console.log(`Título "${tasks[index].title}" foi localizado!`);
-    tasks[index].title = newTitle;
-    alert(`Título foi modificado para "${tasks[index].title}".`);
+    console.log(`Título "${tasks.find(id).title}" foi localizado!`);
+    tasks.find(id).title = newTitle;
+    alert(`Título foi modificado para "${newTitle}".`);
   } catch (error) {
     console.error(error.message);
   }
 }
 
-function editDescriptionTask(index, newDescription) {
+function editDescriptionTask(id, newDescription) {
   try {
-    console.log(`A descrição "${tasks[index].description}" foi localizada!`);
-    tasks[index].description = newDescription;
+    console.log(`A descrição "${tasks.find(id).title}" foi localizada!`);
+    tasks.find(id).title = newDescription;
     alert(`A descrição foi modificada para "${newDescription}".`);
   } catch (error) {
     console.error(error.message);
@@ -119,23 +119,22 @@ function editDescriptionTask(index, newDescription) {
 
 function tasksList() {
   try {
-    const formatedTasksList = tasks
-      .map((item, index) => `${index} - ${item.title}\n`)
-      .filter((item) => item.deleted == false);
-    // console.log(formatedTasksList)
+    const formatedTasksList = tasks.filter((task) => !task.deleted).map((item, index) => `${index} - ${item.title}\n`);
+    
     return formatedTasksList;
   } catch (error) {
     console.error(error.message);
   }
 }
 
-function selectIndexTask() {
+function selectIdTask() {
   let indexTarefaSelecionada = parseInt(
     prompt(`Selecione a tarefa que você deseja editar?\n${tasksList()}`)
   );
-
-  return indexTarefaSelecionada;
-}
+  const formatedTasksList = tasks.filter((task) => !task.deleted)
+      const idTask = formatedTasksList[indexTarefaSelecionada].id
+      return idTask;
+  }
 
 function findTaskById(id) {
   try {
@@ -175,8 +174,9 @@ while (sair == false) {
       break;
     //edit task
     case "2":
-      idTarefaSelecionada = selectIndexTask();
-
+      idTarefaSelecionada = selectIdTask();
+      
+      
       const secondOption = prompt(
         "Você deseja editar o título ou a descrição:\n1-Editar o título.\n2-Editar a descrição."
       );
@@ -193,7 +193,7 @@ while (sair == false) {
             alert("Operação cancelada. Voltando para o menu.");
             break;
           }
-          editTitleTask(indexTarefaSelecionada, tituloEdit);
+          editTitleTask(idTarefaSelecionada, tituloEdit);
           break;
 
         case "2":
@@ -202,7 +202,7 @@ while (sair == false) {
             alert("Operação cancelada. Voltando para o menu.");
             break;
           }
-          editDescriptionTask(indexTarefaSelecionada, descriptionEdit);
+          editDescriptionTask(idTarefaSelecionada, descriptionEdit);
           break;
 
         default:
@@ -210,7 +210,7 @@ while (sair == false) {
       }
       break;
     case "3":
-      removeTask(selectIndexTask());
+      removeTask(selectIdTask());
       break;
     case "4":
       alert(tasksList());
@@ -225,52 +225,3 @@ while (sair == false) {
       break;
   }
 }
-
-//simulação 1 - criar uma tarefa
-// createTask("lavar roupa", "teste teste teste teste teste")
-// createTask("", "teste teste teste teste teste")
-// createTask("lavar o carro", "")
-// createTask("lavar o carro", "teste teste teste teste teste")
-// createTask("12121212121212", "teste teste teste teste teste");
-// createTask("eu", "teste teste teste teste teste");
-// createTask("lavar o carro", "teste");
-// console.table(tasks)
-// console.log("----------------")
-
-//simulação 2 - deletar uma tarefa
-// removeTask("lavar roupa")
-// removeTask("lavar o carro")
-// console.table(tasks)
-// console.log("----------------")
-
-//simulação 3 - editar Título
-// editTitleTask("lavar roupa", "lavar cabelo")
-// editTitleTask("lavar o carro", "lavar o chão")
-// console.table(tasks)
-// console.log("----------------")
-
-//simulação 4 - editar Descrição (usando o Título como referencia)
-// console.table(tasks);
-// // editDescriptionTask("ir para natacao", "aula cancelada!");
-// // editDescriptionTask("ir natacao", "aula cancelada!");
-// console.table(tasks);
-
-//simulação 5 - lista de tarefas
-// console.table(tasks)
-// tasksList()
-
-//simulação 6 - Find by Id
-// findTaskById(1754335567097)
-// findTaskById(1700335567097)
-
-// Edição usando o prompt
-// function editTitleTask(title){
-//     const taskToEdit =  tasks.find(item => item.title == title)
-//     const textoNovo = prompt(`Digite o seu novo texto para a tarefa ${taskToEdit.title}.`)
-//     if (taskToEdit){
-//         taskToEdit.title = title
-//         console.log(`Título foi modificado de ${taskToEdit.title} para ${textoNovo}.`)
-//     } else {
-//         console.log("Título inexistente!")
-//     }
-// }
