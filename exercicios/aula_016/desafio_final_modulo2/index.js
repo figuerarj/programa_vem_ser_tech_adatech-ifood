@@ -31,34 +31,32 @@ let tasks = [
   },
 ];
 
-
-
-function validarInput(
-  texto,
-  quantidadeMinima,
-  naoPodeApenasNumero,
-  naoTemDuplicado
+function validateUserInput(
+  text,
+  minimumLength,
+  mustHaveNonNumeric,
+  noDuplicatesAllowed
 ) {
-  let entradaValida = false;
+  let validInput = false;
   let valor = "";
-  while (!entradaValida) {
+  while (!validInput) {
     try {
-      valor = prompt(texto);
+      valor = prompt(text);
 
       if (valor === null) {
         return undefined;
       }
 
-      if (valor.length < quantidadeMinima) {
+      if (valor.length < minimumLength) {
         throw new Error(
-          `Você não pode criar um título com menos de ${quantidadeMinima} caracteres.`
+          `Digite um texto com pelo menos ${minimumLength} caracteres.`
         );
       }
-      if (naoPodeApenasNumero && valor.replace(/\d+/, "").length === 0) {
-        throw new Error("Você não pode criar um título usando apenas números.");
+      if (mustHaveNonNumeric && valor.replace(/\d+/, "").length === 0) {
+        throw new Error("Não é aceito texto que tenha apenas números.");
       }
       if (
-        naoTemDuplicado &&
+        noDuplicatesAllowed &&
         tasks.find((item) => item.title == valor) !== undefined
       ) {
         throw new Error(
@@ -66,13 +64,14 @@ function validarInput(
         );
       }
 
-      entradaValida = true;
+      validInput = true;
     } catch (error) {
       alert(error.message);
     }
   }
   return valor;
 }
+
 
 function createTask(title, description) {
   try {
@@ -90,7 +89,7 @@ function createTask(title, description) {
 
 function removeTask(id) {
   try {
-    const taskFounded = tasks.find(task => task.id == id)
+    const taskFounded = tasks.find((task) => task.id == id);
     taskFounded.deleted = true;
     alert(`Tarefa "${taskFounded.title}" foi removida com sucesso!`);
   } catch (error) {
@@ -100,7 +99,7 @@ function removeTask(id) {
 
 function editTitleTask(id, newTitle) {
   try {
-    const taskFounded = tasks.find(task => task.id == id)
+    const taskFounded = tasks.find((task) => task.id == id);
     console.log(`O Título "${taskFounded.title}" foi localizado!`);
     taskFounded.title = newTitle;
     alert(`Título foi modificado para "${newTitle}".`);
@@ -111,7 +110,7 @@ function editTitleTask(id, newTitle) {
 
 function editDescriptionTask(id, newDescription) {
   try {
-    const taskFounded = tasks.find(task => task.id == id)
+    const taskFounded = tasks.find((task) => task.id == id);
     console.log(`A descrição "${taskFounded.description}" foi localizada!`);
     taskFounded.description = newDescription;
     alert(`A descrição foi modificada para "${newDescription}".`);
@@ -121,110 +120,110 @@ function editDescriptionTask(id, newDescription) {
 }
 
 function tasksList() {
-  try {
-    const formatedTasksList = tasks.filter((task) => !task.deleted).map((item, index) => `${index} - ${item.title}\n`);
-    
-    return formatedTasksList;
-  } catch (error) {
-    console.error(error.message);
-  }
+    return tasks
+      .filter((task) => !task.deleted)
+      .map((item, index) => `${index+1} - ${item.title}`).join("\n");
 }
 
 function selectIdTask() {
-  let indexTarefaSelecionada = parseInt(
-    prompt(`Selecione a tarefa que você deseja editar?\n${tasksList()}`)
-  );
-  const formatedTasksList = tasks.filter((task) => !task.deleted)
-      const idTask = formatedTasksList[indexTarefaSelecionada].id
-      return idTask;
-  }
+  let selectedTaskIndex = parseInt(
+    prompt(`Digite o número da tarefa:\n${tasksList()}`)
+  )-1;
+  const formatedTasksList = tasks.filter((task) => !task.deleted);
+  const idTask = formatedTasksList[selectedTaskIndex].id;
+  return idTask;
+}
 
 function findTaskById(id) {
   try {
     const taskFounded = tasks.find((item) => item.id == id);
-    // const index = tasks.indexOf(taskFounded);
-
+    
     if (!taskFounded) {
       throw new Error(`Id(${id}) não encontrado.`);
     }
-    alert([taskFounded], `ID (${id}) localizado com sucesso!`);
+    alert(`ID (${id}) localizado com sucesso: \nTítulo: ${taskFounded.title}\nDescrição: ${taskFounded.description}`);
   } catch (error) {
     console.error(error.message);
   }
 }
 
-let sair = false;
+let exit = false;
 
-while (sair == false) {
+while (exit == false) {
   const option = prompt(
-    "Escolha a opção desejada:\n1-Adicionar uma tarefa.\n2-Editar uma tarefa salva.\n3-Remover uma tarefa salva.\n4-Listar todas as tarefas salvas\n5-Obter uma tarefa, através de um parâmetro.\n6-Sair."
+    "Escolha a opção desejada:\n1-Adicionar uma tarefa.\n2-Editar uma tarefa salva.\n3-Remover uma tarefa salva.\n4-Listar todas as tarefas salvas\n5-Obter uma tarefa pelo ID.\n6-Sair."
   );
   switch (option) {
-    //create task
     case "1":
-      const titulo = validarInput("Digite o título", 4, true, true);
-      if (titulo === undefined) {
+      const title = validateUserInput("Digite o título", 4, true, true);
+      if (!title) {
         alert("Operação cancelada. Voltando para o menu.");
         break;
       }
-      const description = validarInput("Digite a descrição", 20);
-      if (description === undefined) {
+      const description = validateUserInput("Digite a descrição", 20);
+      if (!description) {
         alert("Operação cancelada. Voltando para o menu.");
         break;
       }
-      createTask(titulo, description);
+      createTask(title, description);
 
       break;
-    //edit task
+
     case "2":
-      idTarefaSelecionada = selectIdTask();
-      
-      
+      const selectedTaskId = selectIdTask();
+
       const secondOption = prompt(
         "Você deseja editar o título ou a descrição:\n1-Editar o título.\n2-Editar a descrição."
       );
 
       switch (secondOption) {
         case "1":
-          const tituloEdit = validarInput(
+          const titleEdit = validateUserInput(
             "Digite o novo título:",
             4,
             true,
             true
           );
-          if (tituloEdit === undefined) {
+          if (titleEdit === undefined) {
             alert("Operação cancelada. Voltando para o menu.");
             break;
           }
-          editTitleTask(idTarefaSelecionada, tituloEdit);
+          editTitleTask(selectedTaskId, titleEdit);
           break;
 
         case "2":
-          const descriptionEdit = validarInput("Digite a nova descrição:", 20);
+          const descriptionEdit = validateUserInput("Digite a nova descrição:", 20);
           if (descriptionEdit === undefined) {
             alert("Operação cancelada. Voltando para o menu.");
             break;
           }
-          editDescriptionTask(idTarefaSelecionada, descriptionEdit);
+          editDescriptionTask(selectedTaskId, descriptionEdit);
           break;
 
         default:
           break;
       }
       break;
-    
-    //remove task  
+
     case "3":
       removeTask(selectIdTask());
       break;
+
     case "4":
       alert(tasksList());
       break;
+
     case "5":
+      const id = parseInt(validateUserInput(
+        "Digite o id:",
+        13,             
+      ));
+      findTaskById(id);
       console.log("obter tarefa pelo id");
       break;
+
     case "6":
-      sair = true;
+      exit = true;
       alert("Lista de Tarefas Finalizada.");
     default:
       break;
