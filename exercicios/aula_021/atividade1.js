@@ -26,7 +26,7 @@ class LoginSystem {
   }
 }
 
-function startSystem() {
+
   const loginSytem = new LoginSystem(); //cria a instancia de LoginSystem
 
   // Cadastrando 2 usuários
@@ -45,6 +45,5 @@ function startSystem() {
   if(usuarioLogado){
     loginSytem.exibirMensagemPersonalizada(usuarioLogado)
 };
-}
 
-startSystem();
+
