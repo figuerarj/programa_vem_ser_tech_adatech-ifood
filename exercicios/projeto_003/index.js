@@ -1,5 +1,4 @@
-//Representa uma transação financeira.
-const prompt = require("prompt-sync")();
+const { printTable } = require('console-table-printer');
 
 function formatDate(date) {
   const year = date.getFullYear();
@@ -32,7 +31,7 @@ class Transaction extends MonetaryElement {
     }
 
     determineTransactionType() {
-        return this.value >= 0 ? 'in' : 'out';
+        return this.value >= 0 ? 'income' : 'expense';
     }
   }
 
@@ -99,15 +98,22 @@ class FinanceManager {
     return totalBalance;
   }
   displayTransactions(){
+    console.log("• Transactions:")
+    if(this.transactions.length === 0){
+        console.log("No transactions foun.")
+    } else {
+
+        const sortedTransactions = this.transactions.sort((a,b) => new Date(a.day) - new Date(b.day))
+        console.table(sortedTransactions.map((transaction) => ({
+            
+            Operation: transaction.type,
+            Description: transaction.description,
+            Value: transaction.value,
+            Date: transaction.day,
+           
+        })));
+    }
     
-    this.transactions.forEach((transaction, index) => {
-        //pega os objetos dentro de filteredTransactions e faz um log.
-        console.log(
-          `${index+1}º Operation:${transaction.type}, Description: ${transaction.description}, Value: ${
-            transaction.value
-          }, Date: ${transaction.day}.`
-        );
-      });
   }
   //passa um objeto e eu devo devolver as posicoes que estao no meio dos dias enviados.
   displayTransactionsWithRange(dateRange) {
@@ -138,20 +144,27 @@ class FinanceManager {
 
   displayCategories() {
     console.log("• Categories:");
-    this.categories.forEach((element, index) =>
-      console.log(`${index + 1}º Category: ${element.name}`)
-    );
+    const formattedCategories = this.categories.map(category => ({ Category: category.name }));
+    
+    console.table(formattedCategories)
+
+
     console.log("");
   }
 
   displayGoals() {
     console.log("• Goals:");
-    this.goals.forEach((goal, index) =>
-      console.log(
-        `${index + 1}º Goal: ${goal.description} - Progress: ${
+     
+    this.goals.forEach((goal, index) => {
+
+        const progressPercentage = (goal.progress / goal.valueGoal) * 100;  
+    console.log(
+        `${index + 1}º Goal: ${goal.description} | Progress: ${
           goal.progress
-        } of ${goal.valueGoal}`
+        } of ${goal.valueGoal} (${progressPercentage.toFixed(2)}%)`
       )
+    }
+    
     );
     console.log("");
   }
@@ -160,9 +173,15 @@ class FinanceManager {
     console.log("-----Financial Report------");
     console.log("");
     this.displayCategories();
-    this.displayGoals(); //ok
     this.displayTransactions();
-    this.calculateBalance()
+    console.log(
+      `Total Balance: R$ ${financialManager.calculateBalance().toFixed(2)}`
+    );
+    console.log("")
+    this.displayGoals(); //ok
+    
+    
+      console.log("");
   }
 
   updateGoalProgress(goal, transaction) {
@@ -187,6 +206,7 @@ class FinanceManager {
 const categorySalary = new Category("Salary");
 const categoryHousing = new Category("Housing");
 const categoryFood = new Category("Food");
+const categoryTravelGoal = new Category("Travel Goal");
 
 //goal
 const travelGoal = new FinancialGoal("Disney Trip", 10000, 0);
@@ -212,10 +232,16 @@ const transaction3 = new Transaction(
   new Date("01-05-2023")
 );
 const transaction4 = new Transaction(
-    "Rent",
+    "Travel Goal",
     1000,
-    categoryHousing,
-    new Date("01-05-2023")
+    categoryTravelGoal,
+    new Date("01-02-2023")
+  );
+  const transaction5 = new Transaction(
+    "Travel Goal",
+    200,
+    categoryTravelGoal,
+    new Date("01-03-2023")
   );
 
 //financialManager
@@ -225,13 +251,15 @@ const financialManager = new FinanceManager();
 financialManager.addCategory(categorySalary);
 financialManager.addCategory(categoryHousing);
 financialManager.addCategory(categoryFood);
+financialManager.addCategory(categoryTravelGoal);
 console.log("");
 
 //addTransacation - add instances of Transaction
 financialManager.addTransaction(transaction1);
 financialManager.addTransaction(transaction2);
 financialManager.addTransaction(transaction3);
-financialManager.addTransaction(transaction4)
+financialManager.addTransaction(transaction4);
+financialManager.addTransaction(transaction5);
 console.log("");
 
 //addGoal - add instances of FinancialGol
@@ -252,35 +280,14 @@ financialManager.displayTransactionsWithRange({
 });
 
 // Exibir categorias disponíveis
-financialManager.displayCategories();
+// financialManager.displayCategories();
 
 //Progress update - select the goal and the value.
 console.log("Updated Progress:")
 financialManager.updateGoalProgress(travelGoal, transaction4);
-
+financialManager.updateGoalProgress(travelGoal, transaction5);
 console.log("");
 
 //mostrar todas as informacoes e status realizados
 financialManager.generateFinancialReport();
 
-// * com prompt
-
-// let parar = false
-
-// while(!parar) {
-//   const operacao = Number(prompt('O que gostaria de fazer [add=0, del=1, list=2, sair=3]?'));
-
-//   if(operacao === 0) {
-//     const livroNome = prompt('Qual nome do livro? ');
-//     const autorLivro = prompt('Qual nome do livro? ');
-//     biblioteca.adicionar(new Livro(livroNome, autorLivro))
-//   }else if(Number(operacao) === 1) {
-//     const livroTitulo = prompt('Qual nome do livro? ');
-//     biblioteca.remover(livroTitulo)
-//   } else if(Number(operacao) === 2) {
-//     biblioteca.listar()
-//   }else if(Number(operacao) === 3)  {
-//     parar = true
-//     console.log("saiu")
-//   }
-// }
