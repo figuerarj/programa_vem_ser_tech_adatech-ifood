@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>DuoLingo Melhorado</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="game">
+        <div id="life"></div>
+        <div id="points" class="hidden">Pontos: <span id="pointsValue"></span></div>
+        <div id="word"></div>
+        <form>
+          <label for="input_text"></label>
+          <input id="input_text" type="text" name="input_text" />
+          <div class="button">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+
+      <button id="restart" class="hidden" type="submit">Re-start</button>
+      <div id="mensagem"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

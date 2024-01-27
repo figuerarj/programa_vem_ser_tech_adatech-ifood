@@ -1,0 +1,86 @@
+.hidden{
+    display: none;
+}
+
+#points {
+    font-size: 2rem;
+    /* display: none;  */
+    /*Inicialmente oculto*/
+}
+
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+}
+
+#word{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#container{
+    
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 30rem;
+}
+
+#mensagem{
+    font-size: 2rem;
+    width: 20rem;
+    white-space: pre-line;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#input_text {
+    width: 100%; /* Garante que o input ocupe 100% do contêiner */
+    box-sizing: border-box; /* Inclui a borda e o preenchimento na largura */
+    padding: .4rem;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#input_text,
+.button {
+    margin-top: .3rem;
+    
+}
+.button{
+    width: 100%;
+    
+}
+
+button{
+    font-weight: 700;
+    font-size: x-large;
+    padding: 1rem;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+/* #game{
+    display: flex;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} */
+
+#life{
+    display: flex;
+    justify-content: center;
+} 
+
+
