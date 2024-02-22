@@ -2,25 +2,25 @@
 // const portugues = ["gato", "cachorro", "sol", "árvore", "computador", "livro", "casa", "carro", "música", "amigo", "flor", "céu", "água", "comida", "tempo", "trabalho", "jogar", "amor", "família", "escola"];
 const words = [
     { english: "cat", portuguese: "gato" },
-    { english: "dog", portuguese: "cachorro" },
-    { english: "sun", portuguese: "sol" },
-    { english: "tree", portuguese: "árvore" },
-    { english: "computer", portuguese: "computador" },
-    { english: "book", portuguese: "livro" },
-    { english: "house", portuguese: "casa" },
-    { english: "car", portuguese: "carro" },
-    { english: "music", portuguese: "música" },
-    { english: "friend", portuguese: "amigo" },
-    { english: "flower", portuguese: "flor" },
-    { english: "sky", portuguese: "céu" },
-    { english: "water", portuguese: "água" },
-    { english: "food", portuguese: "comida" },
-    { english: "time", portuguese: "tempo" },
-    { english: "work", portuguese: "trabalho" },
-    { english: "play", portuguese: "jogar" },
-    { english: "love", portuguese: "amor" },
-    { english: "family", portuguese: "família" },
-    { english: "school", portuguese: "escola" }
+    { english: "dog", portuguese: "cachorro" }
+    // { english: "sun", portuguese: "sol" },
+    // { english: "tree", portuguese: "árvore" },
+    // { english: "computer", portuguese: "computador" },
+    // { english: "book", portuguese: "livro" },
+    // { english: "house", portuguese: "casa" },
+    // { english: "car", portuguese: "carro" },
+    // { english: "music", portuguese: "música" },
+    // { english: "friend", portuguese: "amigo" },
+    // { english: "flower", portuguese: "flor" },
+    // { english: "sky", portuguese: "céu" },
+    // { english: "water", portuguese: "água" },
+    // { english: "food", portuguese: "comida" },
+    // { english: "time", portuguese: "tempo" },
+    // { english: "work", portuguese: "trabalho" },
+    // { english: "play", portuguese: "jogar" },
+    // { english: "love", portuguese: "amor" },
+    // { english: "family", portuguese: "família" },
+    // { english: "school", portuguese: "escola" }
   ];
 
 
@@ -29,13 +29,18 @@ let lifeCounter = 5;
 let points = 0;
 
 const form = document.querySelector("form");
+// capture
 const inputText = document.querySelector("#input_text");
+// display
 const life = document.querySelector("#life"); 
 const word = document.querySelector("#word");
-const pointsElement = document.querySelector("#pointsValue");
-const restartButton = document.querySelector("#restart");
-const game = document.querySelector("#game");
+const displayPoints = document.querySelector("#pointsDisplay")
+const pointsValue = document.querySelector("#pointsValue");
 const mensagemDiv = document.getElementById("mensagem");
+//button
+const restartButton = document.querySelector("#restart");
+
+const game = document.querySelector("#game");
 
 let newWordIndex
 
@@ -54,7 +59,7 @@ showPoints()
 sortWord()
 
 function showPoints() {
-    pointsElement.innerHTML = points
+    pointsValue.innerHTML = points
 }
 
 function sortWord(){
@@ -66,7 +71,7 @@ function sortWord(){
       }
     
     do{
-        newWordIndex = Math.floor(Math.random()*20);
+        newWordIndex = Math.floor(Math.random()*2);
 
     } while(wordsAlreadySelected.includes(newWordIndex))
     wordsAlreadySelected.push(newWordIndex);
@@ -94,6 +99,12 @@ function deuMatch(event){
         points++
         showMessage("Você acertou!");
         sortWord()
+        if(wordsAlreadySelected === words.length ){
+            showMessage("GAME OVER!");
+            game.classList.add("hidden")
+            restartButton.classList.remove("hidden")
+            displayPoints.classList.remove("hidden")           
+        }
         
         
     } else{
@@ -104,7 +115,7 @@ function deuMatch(event){
             showMessage("GAME OVER!");
             game.classList.add("hidden")
             restartButton.classList.remove("hidden")
-            pointsElement.classList.remove("hidden")           
+            displayPoints.classList.remove("hidden")           
         }
     }
     inputText.value = ""
@@ -121,7 +132,7 @@ restartButton.addEventListener("click", ()=>{
     showPoints()
     game.classList.remove("hidden")
     restartButton.classList.add("hidden")
-    pointsElement.classList.add("hidden")
+    displayPoints.classList.add("hidden")
 })
 form.addEventListener("submit",deuMatch)
     

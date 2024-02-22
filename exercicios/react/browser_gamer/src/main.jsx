@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider,} from "react-router-dom"
 import Home from './screens/Home'
+import Games from './screens/games'
+
 
 const router = createBrowserRouter([
   {
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/games",
-        element:<h1>Games</h1>
+        element:<Games />
       },
 
     ]
