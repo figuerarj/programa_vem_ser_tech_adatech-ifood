@@ -3,11 +3,7 @@ import ReactDOM from 'react-dom/client'
 
 import './index.css'
 import { createBrowserRouter, RouterProvider,} from "react-router-dom"
-import Home from './screens/Home'
-import Games from './screens/games'
-import Search from './screens/search'
-import Login from './screens/login'
-import Subscribe from './screens/subscribe'
+import {Home,Games,Login,Search,Subscribe} from '../../browser_gamer/src/screens/index.jsx'
 
 
 const router = createBrowserRouter([
