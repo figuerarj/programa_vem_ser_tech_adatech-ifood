@@ -21,6 +21,7 @@ const Games = () =>{
                 title={games.title}
                 short_description={games.short_description}
                 thumbnail={games.thumbnail}
+                key={games.id}
             />
             )}
         </section>

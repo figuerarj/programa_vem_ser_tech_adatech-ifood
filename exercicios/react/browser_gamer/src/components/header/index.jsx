@@ -6,10 +6,16 @@ import "./styles.css";
 const Header = () => {
   return (
     <header className="headerContainer">
-      <h1 className="logo">
-      <NavLink to="/"><PiGameControllerDuotone /> BBG </NavLink>
-      </h1>
-
+      <div className="hero-container">
+      <div className="environment"></div>
+      <NavLink className="flex" to="/">
+      <PiGameControllerDuotone className="size"/>
+      {/* <h1 className="logo">
+       BBG 
+      </h1> */}
+      <h1 className="hero glitch layers" data-text="BBG"><span>BBG</span></h1>
+      </NavLink>
+      </div>
       <nav>
         <ul className={"nav__links"}>
           <li>
