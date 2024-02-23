@@ -20,15 +20,15 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/signin" 
+            <NavLink to="/login" 
             >
               Login
             </NavLink>
           </li>
           <li>
-            <NavLink to="/signup" 
+            <NavLink to="/search" 
             >
-              Subscribe
+              Search
             </NavLink>
           </li>
         </ul>

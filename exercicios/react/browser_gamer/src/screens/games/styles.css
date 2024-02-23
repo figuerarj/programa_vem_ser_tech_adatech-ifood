@@ -1,3 +1,21 @@
+.Games{
+    
+        height: 100vh;
+        width:100vw;
+        
+}
+
+
+section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+}
+
+
 .gamesContainer{
     width: 100px;
+    position: absolute;
+    left: 10%;
+    
 }

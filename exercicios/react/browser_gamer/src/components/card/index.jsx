@@ -1,11 +1,13 @@
 import React from 'react'
 import "./styles.css"
 
-const Card = ({title, short_description}) => {
+const Card = ({title, short_description,thumbnail}) => {
   return (
     <article className='cardContainer'>
-        <label>{title}</label>
-        <p>{short_description}</p>
+        <img src={thumbnail} alt="Card image" className='cardImg'/>
+        <label className='cardTitle'>{title}</label>
+        <p className='cardDescription'>{short_description}</p>
+        
     </article>
   )
 }

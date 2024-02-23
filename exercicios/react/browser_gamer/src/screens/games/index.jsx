@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "../../components/card";
+import "./styles.css"
 
 
 const Games = () =>{
@@ -13,18 +14,20 @@ const Games = () =>{
     }, []);
 
     return(
+        <div className="Games">
         <section className="gamesContainer">
            { games.map((games) => 
               <Card
                 title={games.title}
                 short_description={games.short_description}
                 thumbnail={games.thumbnail}
-                release={games.release_date}
-                developer={games.developer}
-                genre={games.genre}
+                // release={games.release_date}
+                // developer={games.developer}
+                // genre={games.genre}
             />
             )}
         </section>
+        </div>
     )
 }
 
