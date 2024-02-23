@@ -1,12 +1,16 @@
 .Search{
-    background-color: #eee;
+    
     height: 100vh;
     width: 100vw;
 }
 
 .search-bar-container{
-    color:black;
+    
     padding: 20vh;
     width: 40%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
 }

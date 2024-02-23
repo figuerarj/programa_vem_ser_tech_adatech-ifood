@@ -7,6 +7,7 @@ import Home from './screens/Home'
 import Games from './screens/games'
 import Search from './screens/search'
 import Login from './screens/login'
+import Subscribe from './screens/subscribe'
 
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path:"/login",
         element:<Login/>
+      },
+      {
+        path:"/subscribe",
+        element:<Subscribe />
       },
       {
         path:"/search",

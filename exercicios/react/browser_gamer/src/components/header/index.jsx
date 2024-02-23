@@ -26,6 +26,13 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
+            <NavLink
+              to="/subscribe"
+              >
+              Subscribe
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/search" 
             >
               Search

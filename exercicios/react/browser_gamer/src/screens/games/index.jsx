@@ -21,9 +21,6 @@ const Games = () =>{
                 title={games.title}
                 short_description={games.short_description}
                 thumbnail={games.thumbnail}
-                // release={games.release_date}
-                // developer={games.developer}
-                // genre={games.genre}
             />
             )}
         </section>
