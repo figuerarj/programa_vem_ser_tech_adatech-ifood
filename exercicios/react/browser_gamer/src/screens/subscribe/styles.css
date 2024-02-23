@@ -1,6 +1,10 @@
+.Subscribe{
+    width: 100vw;
+    height: 100vh;
+}
 
 .Subscribe-container {
-    background: #111;
+    
     height: 100%;
     width: 100%;
     display: flex;
@@ -9,7 +13,7 @@
     align-items: center;
   }
   
-  .subscribe-group {
+  .form-group {
     display: flex;
     flex-direction: column;
     margin: 10px 0;

@@ -17,8 +17,9 @@ const Subscribe = () => {
   };
   
   return (
+    <div className='Subscribe'>
     <div className='Subscribe-container'>
-      <div className='subscribe-group'>
+      <div className='form-group'>
         <label>Login</label>
         <input className={errors?.name && 'input-error'} 
         type="text" 
@@ -27,21 +28,22 @@ const Subscribe = () => {
         />
         {errors?.name?.type === 'required' && <p className='error-message'>Name is required</p>}
       </div>
-      <div className='subscribe-group'>
+      <div className='form-group'>
         <label>E-mail</label>
         <input type="email" placeholder='Type your e-mail' 
         {...register("email")}
         />
       </div>
-      <div className='subscribe-group'>
+      <div className='form-group'>
         <label>Password</label>
         <input type="password" placeholder='Type your password' 
         {...register("password")}
         />
       </div>
-      <div className='subscribe-group'>
+      <div className='form-group'>
         <button onClick={() => handleSubmit(onSubmit)()}>Submit</button>
       </div>
+    </div>
     </div>
   )
 }
