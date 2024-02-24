@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 
 import './index.css'
 import { createBrowserRouter, RouterProvider,} from "react-router-dom"
-import {Home,Games,Login,Search,Subscribe} from '../../browser_gamer/src/screens/index.jsx'
+import {Home,Games,Login,Search,Subscribe,Welcome,Contact} from '../../browser_gamer/src/screens/index.jsx'
+
 
 
 const router = createBrowserRouter([
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<h1>Entrada</h1>
+        element:<Welcome/>
       },
       {
         path:"/login",
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/contact",
-        element:<h1>Contact</h1>
+        element:<Contact />
       },
       {
         path:"/games",

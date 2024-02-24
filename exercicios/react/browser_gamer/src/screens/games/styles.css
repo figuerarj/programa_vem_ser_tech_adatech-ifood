@@ -1,13 +1,16 @@
 .Games{
     height: 100vh;
     width: 100vw;
+    
 }
 
 
-section{
+.games_section{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    
+    grid-template-rows: min-content;
+            
+      
 }
 
 

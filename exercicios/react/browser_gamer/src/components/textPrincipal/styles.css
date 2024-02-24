@@ -1,0 +1,27 @@
+.text-white{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 5rem 10rem;
+}
+
+.welcome_button{
+    padding: 7px 14px;
+    font-size: 1.2 rem;
+    color: #fff;
+    background-color: rgb(4, 79, 144);
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid rgb(249,168,168);
+    border-radius: 4px;
+    cursor:pointer;
+    margin:20px;
+    
+    
+}
+
+.welcome_button:hover{
+    background-color: white;
+    color: black;
+}

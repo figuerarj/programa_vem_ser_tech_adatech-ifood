@@ -1,0 +1,20 @@
+.Welcome{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    
+}
+
+.wrapper{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url('../../assets/img/41772.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -18,27 +18,27 @@ const Header = () => {
       </div>
       <nav>
         <ul className={"nav__links"}>
-          <li>
+          <li className="header_li">
             <NavLink
               to="/games"
               >
               Games
             </NavLink>
           </li>
-          <li>
+          <li className="header_li">
             <NavLink to="/login" 
             >
               Login
             </NavLink>
           </li>
-          <li>
+          <li className="header_li">
             <NavLink
               to="/subscribe"
               >
               Subscribe
             </NavLink>
           </li>
-          <li>
+          <li className="header_li">
             <NavLink to="/search" 
             >
               Search
@@ -46,7 +46,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <button>
+      <button className="button_link">
         <NavLink to="/contact">Contact</NavLink>
       </button>
     </header>
